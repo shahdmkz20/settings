@@ -45,7 +45,7 @@ class SettingsJobsScreen extends StatelessWidget {
                       ),
                       SizedBox(
                         height: Get.height * 0.68,
-                        child: SettingsJobCard(
+                        child: SettingsJobNewsCard(
                           job: controller.filteredJobList,
                         ),
                       ),

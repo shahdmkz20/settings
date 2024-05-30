@@ -13,10 +13,11 @@ class CustomTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     SettingsNewsController controller = Get.put(SettingsNewsController());
     return GetBuilder<SettingsNewsController>(builder: (controller) {
       return Container(
-        margin: const EdgeInsets.only(bottom: 15),
+        margin: EdgeInsets.only(bottom: Get.height * 0.03),
         height: Get.height * 0.03,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,

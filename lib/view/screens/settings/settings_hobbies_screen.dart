@@ -1,3 +1,4 @@
+import 'package:articles/view/custom_widgets/settings/appbar/settings_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
@@ -28,9 +29,10 @@ class SettingsHobbiesScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text('Settings Hobbies'),
-      ),
+          automaticallyImplyLeading: false,
+          title: SettingsAppbar(onTap: () {
+            Get.back();
+          })),
       body: SafeArea(
         child: Directionality(
           textDirection: TextDirection.rtl,

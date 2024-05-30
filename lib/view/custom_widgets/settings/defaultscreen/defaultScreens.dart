@@ -1,7 +1,5 @@
 import 'package:articles/view/custom_widgets/settings/appbar/settings_appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class Defaultscreens extends StatelessWidget {
   final Widget child;

@@ -6,7 +6,6 @@ import 'package:articles/view/screens/settings/settings_saved_screen.dart';
 import 'package:get/get.dart';
 
 import 'core/constants/routes.dart';
-import 'view/screens/settings/settings_hobbies_screen.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(

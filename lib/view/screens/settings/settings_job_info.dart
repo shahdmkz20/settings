@@ -1,5 +1,4 @@
 import 'package:articles/data/static/static.dart';
-import 'package:articles/view/custom_widgets/settings/appbar/settings_appbar.dart';
 import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 
