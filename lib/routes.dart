@@ -2,6 +2,7 @@ import 'package:articles/view/screens/settings/settings_home_screen.dart';
 import 'package:articles/view/screens/settings/settings_job_info.dart';
 import 'package:articles/view/screens/settings/settings_jobs_screen.dart';
 import 'package:articles/view/screens/settings/settings_news_screen.dart';
+import 'package:articles/view/screens/settings/settings_records_screen.dart';
 import 'package:articles/view/screens/settings/settings_saved_screen.dart';
 import 'package:get/get.dart';
 
@@ -18,4 +19,5 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoutes.saved, page: () => const SettingsSavedScreen()),
   GetPage(name: AppRoutes.hobbies, page: () => const SettingsNewsScreen()),
   GetPage(name: AppRoutes.news, page: () => const SettingsNewsScreen()),
+  GetPage(name: AppRoutes.records, page: () => const SettingsRecordsScreen()),
 ];

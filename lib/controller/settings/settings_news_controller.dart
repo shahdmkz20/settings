@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../../model/settings/news_model.dart';
 
@@ -34,7 +33,5 @@ class SettingsNewsController extends SettingsNewsControllerASB {
   }
 
   @override
-  share() {
-    Share.share('share url will be added here');
-  }
+  share() {}
 }
