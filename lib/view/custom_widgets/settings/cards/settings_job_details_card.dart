@@ -67,7 +67,7 @@ class SettingsJobDetailsGrid extends StatelessWidget {
                 break;
               case 2:
                 additionalText = (job.nationality == 'Any'
-                    ? " لا يشترط جنسية محددة"
+                    ? " لا يشترط جنسية"
                     : job.nationality);
                 break;
               case 3:

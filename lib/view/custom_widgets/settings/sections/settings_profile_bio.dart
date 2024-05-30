@@ -12,55 +12,49 @@ class SettingsProfileBio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 1,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            height: Get.height * 0.12,
-            clipBehavior: Clip.hardEdge,
-            decoration: const BoxDecoration(shape: BoxShape.circle),
-            child: Image.network(
-              person.pictureUrl,
-              fit: BoxFit.cover,
-            ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          height: Get.height * 0.12,
+          clipBehavior: Clip.hardEdge,
+          decoration: const BoxDecoration(shape: BoxShape.circle),
+          child: Image.network(
+            person.pictureUrl,
+            fit: BoxFit.cover,
           ),
-          Expanded(
-            child: Container(
-              margin: const EdgeInsets.only(left: 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+        ),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                person.name,
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
+              const Text("نبذة"),
+              Row(
                 children: [
-                  Text(
-                    person.name,
-                    style: Theme.of(context).textTheme.titleSmall,
+                  Expanded(
+                    child: Text(
+                      person.bio,
+                      style: Theme.of(context).textTheme.displaySmall,
+                      overflow:
+                          TextOverflow.visible, // Add ellipsis for long text
+                    ),
                   ),
-                  const Text("نبذة"),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          person.bio,
-                          style: Theme.of(context).textTheme.displaySmall,
-                          overflow: TextOverflow
-                              .visible, // Add ellipsis for long text
-                        ),
-                      ),
-                      SvgPicture.asset(
-                        color: AppColors.dangerColor,
-                        ImageAssets.powerOff,
-                        width: Get.width * 0.065,
-                      )
-                    ],
+                  SvgPicture.asset(
+                    color: AppColors.dangerColor,
+                    ImageAssets.powerOff,
+                    width: Get.width * 0.065,
                   )
                 ],
-              ),
-            ),
-          )
-        ],
-      ),
+              )
+            ],
+          ),
+        )
+      ],
     );
   }
 }

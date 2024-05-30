@@ -8,36 +8,25 @@ import '../cards/settings_sections_card.dart';
 
 class SettingsSectionsPage extends StatelessWidget {
   final List<SettingsSectionModel> sections;
-  final Person person;
+  final bool savedCat;
   const SettingsSectionsPage(
-      {super.key, required this.sections, required this.person});
+      {super.key, required this.sections, this.savedCat = false});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: Get.height,
-      child: Column(
-        children: [
-          SettingsProfileBio(
-            person: person,
-          ),
-          Expanded(
-            flex: 4,
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              child: ListView.builder(
-                itemCount: sections.length,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) {
-                  return SettingsSectionsCard(
-                    index: index,
-                    sections: sections,
-                  );
-                },
-              ),
-            ),
-          ),
-        ],
+      child: ListView.builder(
+        itemCount: sections.length,
+        physics: const NeverScrollableScrollPhysics(),
+        itemBuilder: (context, index) {
+          return savedCat == true && (index == 4 || index == 5)
+              ? Container()
+              : SettingsSectionsCard(
+                  index: index,
+                  sections: sections,
+                );
+        },
       ),
     );
   }

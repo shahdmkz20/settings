@@ -1,3 +1,4 @@
+import 'package:articles/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,12 +15,23 @@ class SettingsSectionsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     SettingsController controller = Get.put(SettingsController());
     return Container(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 10,
+            spreadRadius: 1,
+            color: Colors.grey.withOpacity(0.1),
+          )
+        ],
+      ),
       margin: const EdgeInsets.only(bottom: 15),
-      child: InkWell(
-        onTap: () {
-          controller.goToPage(index);
-        },
-        child: Card(
+      child: Card(
+        color: AppColors.primaryCardColor,
+        elevation: 0,
+        child: InkWell(
+          onTap: () {
+            controller.goToPage(index);
+          },
           child: Container(
             padding: const EdgeInsets.all(8.0),
             child: Row(

@@ -41,5 +41,6 @@ ThemeData ArabicTheme = ThemeData(
       //فقرات
       bodyLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w300),
       //فقرات ضمن الكاردات
+      bodyMedium: TextStyle(fontSize: 16),
       bodySmall: TextStyle(fontSize: 16, fontWeight: FontWeight.w300)),
 );

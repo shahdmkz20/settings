@@ -48,15 +48,28 @@ List<JobDescription> jobDescription = [
 
 List<SavedCat> savedCategories = [
   SavedCat(
-      title: 'الأخبار', color: AppColors.accent, icon: const IconData(0xf68d)),
+      title: 'الأخبار',
+      color: AppColors.accent,
+      icon: Icons.ads_click_outlined),
   SavedCat(
       title: 'المقالات',
       color: AppColors.successColor,
-      icon: Icons.book_outlined),
+      icon: Icons.menu_book_outlined),
   SavedCat(
       title: 'البودكاست', color: AppColors.dangerColor, icon: Icons.headphones),
   SavedCat(
       title: 'المتجر',
-      color: AppColors.primaryBackGroundColor,
-      icon: Icons.shopping_bag),
+      color: AppColors.secondryBackGroundColor,
+      icon: Icons.shopping_bag_outlined),
+];
+
+List<String> savedCategoriesTab = [
+  'جديد',
+  'صحة',
+  'اعلام',
+  'سياحة',
+  'تسويق',
+  'رياضة',
+  'ازياء',
+  ''
 ];
