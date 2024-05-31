@@ -1,3 +1,4 @@
+import 'package:articles/view/screens/settings/settings_advertisment_screen.dart';
 import 'package:articles/view/screens/settings/settings_home_screen.dart';
 import 'package:articles/view/screens/settings/settings_job_info.dart';
 import 'package:articles/view/screens/settings/settings_jobs_screen.dart';
@@ -20,4 +21,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoutes.hobbies, page: () => const SettingsNewsScreen()),
   GetPage(name: AppRoutes.news, page: () => const SettingsNewsScreen()),
   GetPage(name: AppRoutes.records, page: () => const SettingsRecordsScreen()),
+  GetPage(
+      name: AppRoutes.advertisment,
+      page: () => const SettingsAdvertismentScreen()),
 ];

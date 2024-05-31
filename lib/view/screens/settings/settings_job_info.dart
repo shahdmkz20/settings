@@ -24,7 +24,7 @@ class JobInformation extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SettingsJobImageContanier(
+              const SettingsImageContainerWithStack(
                 imageUrl:
                     'https://www.guvi.in/blog/wp-content/uploads/2023/07/Future-and-Scope-of-UIUX-Design.webp',
               ),

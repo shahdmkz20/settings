@@ -1,10 +1,10 @@
-import 'package:articles/core/constants/colors.dart';
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
 import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controller/settings/settings_records_controller.dart';
+import '../../custom_widgets/settings/cards/settings_records_card.dart';
 import '../../custom_widgets/settings/records_widgets.dart/select_all_checkbox.dart';
 import '../../custom_widgets/settings/records_widgets.dart/textwith_icon.dart';
 
@@ -13,6 +13,7 @@ class SettingsRecordsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     SettingsRecordsController controller = Get.put(SettingsRecordsController());
     return Defaultscreens(
         onTap: () {
@@ -35,7 +36,17 @@ class SettingsRecordsScreen extends StatelessWidget {
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
-                  const SelectAllCheckbox()
+                  const SelectAllCheckbox(),
+                  SizedBox(
+                    height: Get.height * 0.03,
+                  ),
+                  SizedBox(
+                      height: Get.height * 0.35, child: const RecordsList()),
+                  const CustomMediumTitle(
+                    text: "20-5-2024",
+                  ),
+                  SizedBox(
+                      height: Get.height * 0.2, child: const RecordsList()),
                 ],
               );
             }),

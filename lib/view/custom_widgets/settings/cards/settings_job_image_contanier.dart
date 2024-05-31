@@ -5,9 +5,11 @@ import 'package:get/get.dart';
 import '../../../../core/constants/colors.dart';
 import '../../../../core/constants/images.dart';
 
-class SettingsJobImageContanier extends StatelessWidget {
+class SettingsImageContainerWithStack extends StatelessWidget {
   final String imageUrl;
-  const SettingsJobImageContanier({super.key, required this.imageUrl});
+  final double radius;
+  const SettingsImageContainerWithStack(
+      {super.key, required this.imageUrl, this.radius = 15});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +19,10 @@ class SettingsJobImageContanier extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 15),
           height: Get.height * 0.3,
           clipBehavior: Clip.hardEdge,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15), topRight: Radius.circular(15))),
+                  topLeft: Radius.circular(radius),
+                  topRight: Radius.circular(radius))),
           child: Image.network(
             imageUrl,
             fit: BoxFit.fill,
