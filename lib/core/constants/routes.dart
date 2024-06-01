@@ -7,5 +7,6 @@ class AppRoutes {
   static const String records = "$settings/records";
   static const String advertisment = "$settings/advertisment";
   static const String hobbies = "$settings/hobbies";
-  static const String settingSettings = '/settings/settings';
+  static const String settingSettings = '$settings/settings';
+  static const String trainig = '$settings/training';
 }

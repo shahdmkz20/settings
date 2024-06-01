@@ -8,15 +8,21 @@ import '../../../../core/constants/images.dart';
 class SettingsImageContainerWithStack extends StatelessWidget {
   final String imageUrl;
   final double radius;
+  final bool withBottomMargin;
   const SettingsImageContainerWithStack(
-      {super.key, required this.imageUrl, this.radius = 15});
+      {super.key,
+      required this.imageUrl,
+      this.radius = 15,
+      this.withBottomMargin = true});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          margin: const EdgeInsets.only(bottom: 15),
+          margin: withBottomMargin
+              ? const EdgeInsets.only(bottom: 15)
+              : const EdgeInsets.all(0),
           height: Get.height * 0.3,
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
@@ -33,14 +39,14 @@ class SettingsImageContainerWithStack extends StatelessWidget {
           right: 10,
           child: Icon(
             Icons.star_outline,
-            color: AppColors.primaryCardColor,
+            color: AppColors.textGreyColor,
           ),
         ),
         Positioned(
           top: 10,
           left: 10,
           child: SvgPicture.asset(
-              color: AppColors.primaryCardColor,
+              color: AppColors.textGreyColor,
               width: Get.width * 0.05,
               ImageAssets.forwardArrow),
         )

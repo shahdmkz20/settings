@@ -29,25 +29,23 @@ class JobInformation extends StatelessWidget {
                     'https://www.guvi.in/blog/wp-content/uploads/2023/07/Future-and-Scope-of-UIUX-Design.webp',
               ),
               CustomMediumTitle(text: controller.job.jobTitle),
-              JobDescriptionContainer(
+              DescriptionContainer(
                 title: "وصف الفرصة",
                 subtitle: false,
                 jobDescription: controller.job.description,
               ),
-              JobDescriptionContainer(
+              DescriptionContainer(
                 title: "المهام",
                 subTitle: "ستكون مسؤولًا عن: ",
                 subtitle: true,
-                jobDescription: controller.job.description,
                 more: true,
                 listLength: controller.job.tasks.length,
                 list: controller.job.tasks,
               ),
-              JobDescriptionContainer(
+              DescriptionContainer(
                 title: "معايير التقديم",
                 subTitle: "يجب ان تملك:",
                 subtitle: true,
-                jobDescription: controller.job.description,
                 more: true,
                 listLength: controller.job.tasks.length,
                 list: controller.job.tasks,

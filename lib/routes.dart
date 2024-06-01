@@ -5,6 +5,7 @@ import 'package:articles/view/screens/settings/settings_jobs_screen.dart';
 import 'package:articles/view/screens/settings/settings_news_screen.dart';
 import 'package:articles/view/screens/settings/settings_records_screen.dart';
 import 'package:articles/view/screens/settings/settings_saved_screen.dart';
+import 'package:articles/view/screens/settings/settings_training_screen.dart';
 import 'package:get/get.dart';
 
 import 'core/constants/routes.dart';
@@ -24,4 +25,5 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoutes.advertisment,
       page: () => const SettingsAdvertismentScreen()),
+  GetPage(name: AppRoutes.trainig, page: () => const SettingsTrainingScreen()),
 ];

@@ -20,12 +20,14 @@ class CustomMediumTitle extends StatelessWidget {
           ? MainAxisAlignment.start
           : MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          textAlign: TextAlign.start,
-          maxLines: 3,
-          overflow: TextOverflow.ellipsis,
-          text,
-          style: Theme.of(context).textTheme.titleMedium,
+        Expanded(
+          child: Text(
+            textAlign: TextAlign.start,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            text,
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
         ),
         addIcon == true
             ? InkWell(
