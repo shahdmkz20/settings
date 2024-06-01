@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SettingsSectionModel {
+class SettingsSectionsModel {
   int id;
-  String sectionName;
+  String name;
   IconData icon;
 
-  SettingsSectionModel({
+  SettingsSectionsModel({
     required this.id,
-    required this.sectionName,
+    required this.name,
     required this.icon,
   });
 }

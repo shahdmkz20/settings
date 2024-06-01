@@ -6,17 +6,16 @@ import '../../model/settings/saved_cat_model.dart';
 import '../../model/settings/settings_sections.dart';
 
 //settings sections data
-List<SettingsSectionModel> settingsSections = [
-  SettingsSectionModel(id: 1, sectionName: "الوظائف", icon: Icons.work_outline),
-  SettingsSectionModel(
-      id: 2, sectionName: "المحفوظات", icon: Icons.bookmark_outline),
-  SettingsSectionModel(
-      id: 3, sectionName: "الاهتمامات", icon: Icons.favorite_outline),
-  SettingsSectionModel(
-      id: 4, sectionName: "السجلات", icon: Icons.history_outlined),
-  SettingsSectionModel(
-      id: 5, sectionName: "البوابة الاعلانية", icon: Icons.campaign_outlined),
-  SettingsSectionModel(id: 1, sectionName: "الاعدادات", icon: Icons.settings),
+List<dynamic> settingsSections = [
+  SettingsSectionsModel(id: 1, name: "الوظائف", icon: Icons.work_outline),
+  SettingsSectionsModel(id: 2, name: "المحفوظات", icon: Icons.bookmark_outline),
+  SettingsSectionsModel(
+      id: 3, name: "الاهتمامات", icon: Icons.favorite_outline),
+  SettingsSectionsModel(id: 4, name: "السجلات", icon: Icons.history_outlined),
+  SettingsSectionsModel(
+      id: 5, name: "البوابة الاعلانية", icon: Icons.campaign_outlined),
+  SettingsSectionsModel(
+      id: 1, name: "الاعدادات", icon: Icons.settings_outlined),
 ];
 
 List<String> jobsType = [

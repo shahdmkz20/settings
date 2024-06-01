@@ -30,6 +30,7 @@ class DescriptionContainer extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 20),
       height: height > 0 ? height : Get.height * 0.13,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(

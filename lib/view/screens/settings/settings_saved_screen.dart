@@ -1,4 +1,5 @@
 import 'package:articles/data/static/static.dart';
+import 'package:articles/model/settings/userlist_model.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -44,9 +45,8 @@ class SettingsSavedScreen extends StatelessWidget {
                 more: true,
               ),
               SizedBox(height: Get.height * 0.03),
-              SettingsSectionsPage(
-                savedCat: true,
-                sections: settingsSections,
+              CustomCardList(
+                list: userList,
               )
             ],
           ),

@@ -5,11 +5,10 @@ import 'package:get/get.dart';
 import '../../../../controller/settings/settings_controller.dart';
 import '../../../../model/settings/settings_sections.dart';
 
-class SettingsSectionsCard extends StatelessWidget {
+class CustomCard extends StatelessWidget {
   final int index;
-  final List<SettingsSectionModel> sections;
-  const SettingsSectionsCard(
-      {super.key, required this.index, required this.sections});
+  final List<dynamic> list;
+  const CustomCard({super.key, required this.index, required this.list});
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +35,12 @@ class SettingsSectionsCard extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Icon(sections[index].icon),
+                Icon(list[index].icon),
                 SizedBox(
                   width: Get.width * 0.02,
                 ),
                 Text(
-                  sections[index].sectionName,
+                  list[index].name,
                   style: Theme.of(context).textTheme.bodyLarge,
                 )
               ],

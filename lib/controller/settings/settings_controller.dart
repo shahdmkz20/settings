@@ -7,7 +7,7 @@ import '../../model/settings/person_model.dart';
 import '../../model/settings/settings_sections.dart';
 
 abstract class SettingsControllerABS extends GetxController {
-  late List<SettingsSectionModel> settingsSection;
+  late List<dynamic> settingsSection;
   late Person person;
   late List<String> listType = [];
   goToPage(int index);
@@ -17,7 +17,7 @@ abstract class SettingsControllerABS extends GetxController {
 class SettingsController extends SettingsControllerABS {
   //settings sections part
   @override
-  List<SettingsSectionModel> get settingsSection => settingsSections;
+  List<dynamic> get settingsSection => settingsSections;
   @override
   Person get person => persons;
   @override

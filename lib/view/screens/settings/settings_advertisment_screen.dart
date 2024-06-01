@@ -1,5 +1,4 @@
 import 'package:articles/controller/settings/settings_advertisment_controller.dart';
-import 'package:articles/model/settings/training_model.dart';
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
 import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';

@@ -3,28 +3,24 @@ import 'package:get/get.dart';
 
 import '../../../../model/settings/settings_sections.dart';
 
-import '../cards/settings_sections_card.dart';
+import '../cards/settings_custom_card.dart';
 
-class SettingsSectionsPage extends StatelessWidget {
-  final List<SettingsSectionModel> sections;
-  final bool savedCat;
-  const SettingsSectionsPage(
-      {super.key, required this.sections, this.savedCat = false});
+class CustomCardList extends StatelessWidget {
+  final List<dynamic> list;
+  const CustomCardList({super.key, required this.list});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: Get.height,
       child: ListView.builder(
-        itemCount: sections.length,
+        itemCount: list.length,
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
-          return savedCat == true && (index == 4 || index == 5)
-              ? Container()
-              : SettingsSectionsCard(
-                  index: index,
-                  sections: sections,
-                );
+          return CustomCard(
+            index: index,
+            list: list,
+          );
         },
       ),
     );
