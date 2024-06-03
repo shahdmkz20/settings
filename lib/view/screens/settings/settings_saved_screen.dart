@@ -26,48 +26,48 @@ class SettingsSavedScreen extends StatelessWidget {
       },
       child: GetBuilder<SettingsSavedController>(builder: (controller) {
         return SingleChildScrollView(
-          child: Container(
-            width: double.infinity,
-            margin: const EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const CustomSearchbar(),
-                SizedBox(height: Get.height * 0.03),
-                const CustomMediumTitle(
-                  addIcon: true,
-                  icon: Icon(Icons.add),
-                  text: 'المحفوظات',
-                ),
-                SizedBox(height: Get.height * 0.03),
-                SettingsSavedCatListView(
-                  savedCategories: savedCategories,
-                ),
-                SizedBox(height: Get.height * 0.03),
-                CustomTextWithMore(
-                  onTap: () {
-                    showDialog(
-                        context: (context),
-                        builder: (context) {
-                          return CustomDialog(
-                            onAdd: () {
-                              controller.addItem(controller.itemName.text);
-                              Get.back();
-                            },
-                            controller: controller.itemName,
-                          );
-                        });
-                  },
-                  title: 'قوائمك',
-                  more: true,
-                ),
-                SizedBox(height: Get.height * 0.03),
-                CustomCardList(
-                  list: userList,
-                )
-              ],
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const CustomSearchbar(),
+              SizedBox(height: Get.height * 0.03),
+              const CustomMediumTitle(
+                addIcon: true,
+                icon: Icon(Icons.add),
+                text: 'المحفوظات',
+              ),
+              SizedBox(height: Get.height * 0.03),
+              SettingsSavedCatListView(
+                savedCategories: savedCategories,
+              ),
+              SizedBox(height: Get.height * 0.03),
+              CustomTextWithMore(
+                onTap: () {
+                  showDialog(
+                      context: (context),
+                      builder: (context) {
+                        return CustomDialog(
+                          firstBtnTap: () {
+                            controller.addItem(controller.itemName.text);
+                            Get.back();
+                          },
+                          controller: controller.itemName,
+                          title: 'انشئ قائمتك',
+                          content: '',
+                          favourites: true,
+                          firstBtnTxt: 'انشئ',
+                        );
+                      });
+                },
+                title: 'قوائمك',
+                more: true,
+              ),
+              SizedBox(height: Get.height * 0.03),
+              CustomCardList(
+                list: userList,
+              )
+            ],
           ),
         );
       }),

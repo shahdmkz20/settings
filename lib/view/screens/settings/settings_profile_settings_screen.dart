@@ -3,11 +3,10 @@ import 'package:articles/view/custom_widgets/settings/sections/settings_sections
 import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
 import 'package:articles/view/custom_widgets/text/custom_text_with_more.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:get/get.dart';
 
-import '../../../core/constants/colors.dart';
-import '../../../core/constants/images.dart';
+import '../../../controller/settings/settings_profile_settings_controller.dart';
 import '../../../data/static/static.dart';
 import '../../custom_widgets/settings/sections/settings_profile_down_section.dart';
 
@@ -16,6 +15,9 @@ class SettingsProfileSettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+    SettingsProfileSettingsController controller =
+        Get.put(SettingsProfileSettingsController());
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Defaultscreens(
@@ -24,10 +26,10 @@ class SettingsProfileSettingsScreen extends StatelessWidget {
           onTap: () {
             Get.back();
           },
-          child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            child: SingleChildScrollView(
-              child: Column(
+          child: SingleChildScrollView(
+            child: GetBuilder<SettingsProfileSettingsController>(
+                builder: (controller) {
+              return Column(
                 children: [
                   CustomTextWithMore(
                     title: 'الإعدادات',
@@ -48,11 +50,13 @@ class SettingsProfileSettingsScreen extends StatelessWidget {
                   SizedBox(
                     height: Get.height * 0.01,
                   ),
+                  CustomCardList(
+                      onTap: (index) {
+                        controller.goToPage(index);
+                      },
+                      list: settingsGeneralList),
                   SizedBox(
-                      height: Get.height * 0.27,
-                      child: CustomCardList(list: settingsGeneralList)),
-                  SizedBox(
-                    height: Get.height * 0.03,
+                    height: Get.height * 0.02,
                   ),
                   CustomMediumTitle(
                     text: 'التطبيق',
@@ -65,26 +69,30 @@ class SettingsProfileSettingsScreen extends StatelessWidget {
                   SizedBox(
                     height: Get.height * 0.01,
                   ),
-                  SizedBox(
-                      height: Get.height * 0.17,
-                      child: CustomCardList(list: settingsAppList)),
+                  CustomCardList(list: settingsAppList),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
-                  const SettingsProfileDownSection(
+                  SettingsProfileDownSection(
+                    onTap: () {
+                      controller.showSignOutDialogg(context);
+                    },
                     text: 'تسجيل الخروج',
                     iconOrImage: true,
                   ),
                   SizedBox(
                     height: Get.height * 0.02,
                   ),
-                  const SettingsProfileDownSection(
+                  SettingsProfileDownSection(
+                    onTap: () {
+                      controller.showDeleteDialogg(context);
+                    },
                     text: 'حذف الحساب',
                     iconOrImage: false,
                   ),
                 ],
-              ),
-            ),
+              );
+            }),
           )),
     );
   }

@@ -27,7 +27,7 @@ class SettingsAppbar extends StatelessWidget {
               clipBehavior: Clip.hardEdge,
               decoration: const BoxDecoration(shape: BoxShape.circle),
               child: Image.network(
-                controller.person.pictureUrl,
+                controller.personModel.pictureUrl,
                 width: Get.width * 0.15,
               ),
             ),

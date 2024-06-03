@@ -10,11 +10,13 @@ class SettingsProfileDownSection extends StatelessWidget {
   final String text;
   final bool iconOrImage;
   final IconData icon;
+  final void Function()? onTap;
   const SettingsProfileDownSection(
       {super.key,
       required this.text,
       required this.iconOrImage,
-      this.icon = Icons.delete_outline});
+      this.icon = Icons.delete_outline,
+      this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class SettingsProfileDownSection extends StatelessWidget {
           width: Get.width * 0.02,
         ),
         InkWell(
+          onTap: onTap,
           child: Text(
             text,
             style: Theme.of(context).textTheme.bodyLarge,

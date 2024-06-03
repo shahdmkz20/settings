@@ -1,8 +1,10 @@
 import 'package:articles/view/screens/settings/settings_advertisment_screen.dart';
+import 'package:articles/view/screens/settings/settings_forget_password.dart';
 import 'package:articles/view/screens/settings/settings_home_screen.dart';
 import 'package:articles/view/screens/settings/settings_job_info.dart';
 import 'package:articles/view/screens/settings/settings_jobs_screen.dart';
 import 'package:articles/view/screens/settings/settings_news_screen.dart';
+import 'package:articles/view/screens/settings/settings_profile_info_screen.dart';
 import 'package:articles/view/screens/settings/settings_profile_settings_screen.dart';
 import 'package:articles/view/screens/settings/settings_records_screen.dart';
 import 'package:articles/view/screens/settings/settings_saved_screen.dart';
@@ -30,4 +32,10 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoutes.settingSettings,
       page: () => const SettingsProfileSettingsScreen()),
+  GetPage(
+      name: AppRoutes.profileInfo,
+      page: () => const SettingsProfileInfoScreen()),
+  GetPage(
+      name: AppRoutes.forgetPassword,
+      page: () => const SettingsForgetPassword()),
 ];

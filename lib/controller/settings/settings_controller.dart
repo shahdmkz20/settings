@@ -4,11 +4,10 @@ import 'package:get/get.dart';
 import '../../data/static/static.dart';
 import '../../model/settings/jobs_model.dart';
 import '../../model/settings/person_model.dart';
-import '../../model/settings/settings_sections.dart';
 
 abstract class SettingsControllerABS extends GetxController {
   late List<dynamic> settingsSection;
-  late Person person;
+  late Person personModel;
   late List<String> listType = [];
   goToPage(int index);
   goToJob(JobModel job);
@@ -19,7 +18,7 @@ class SettingsController extends SettingsControllerABS {
   @override
   List<dynamic> get settingsSection => settingsSections;
   @override
-  Person get person => persons;
+  Person get personModel => person;
   @override
   goToPage(int index) {
     switch (index) {
@@ -39,7 +38,8 @@ class SettingsController extends SettingsControllerABS {
         Get.toNamed(AppRoutes.advertisment);
         break;
       case 5:
-        Get.toNamed(AppRoutes.settingSettings);
+        Get.toNamed(AppRoutes.settingSettings,
+            arguments: {'person': personModel});
         break;
     }
   }

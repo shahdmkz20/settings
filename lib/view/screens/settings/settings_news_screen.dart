@@ -17,30 +17,26 @@ class SettingsNewsScreen extends StatelessWidget {
       onTap: () {
         Get.back();
       },
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 24),
-        width: Get.width,
-        child: SingleChildScrollView(
-          physics: NeverScrollableScrollPhysics(),
-          child: Column(
-            children: [
-              CustomTabBar(
-                tabsNames: savedCategoriesTab,
-              ),
-              GetBuilder<SettingsNewsController>(builder: (context) {
-                return SizedBox(
-                  height: Get.height * 0.85,
-                  child: SettingsJobNewsCard(
-                    news: true,
-                    newsModel: controller.filteredList,
-                    onTap: () {
-                      controller.share();
-                    },
-                  ),
-                );
-              }),
-            ],
-          ),
+      child: SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            CustomTabBar(
+              tabsNames: savedCategoriesTab,
+            ),
+            GetBuilder<SettingsNewsController>(builder: (context) {
+              return SizedBox(
+                height: Get.height * 0.85,
+                child: SettingsJobNewsCard(
+                  news: true,
+                  newsModel: controller.filteredList,
+                  onTap: () {
+                    controller.share();
+                  },
+                ),
+              );
+            }),
+          ],
         ),
       ),
     );

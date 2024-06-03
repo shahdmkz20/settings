@@ -16,16 +16,18 @@ class SettingsProfileBio extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          height: Get.height * 0.12,
+          //  height: Get.height * 0.12,
           clipBehavior: Clip.hardEdge,
           decoration: const BoxDecoration(shape: BoxShape.circle),
           child: Image.network(
+            height: Get.height * 0.12,
             person.pictureUrl,
             fit: BoxFit.cover,
           ),
         ),
         Expanded(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [

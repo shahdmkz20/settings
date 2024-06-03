@@ -1,5 +1,5 @@
 import 'package:articles/core/constants/routes.dart';
-import 'package:articles/model/settings/settings_sections.dart';
+
 import 'package:articles/model/settings/userlist_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

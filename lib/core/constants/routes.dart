@@ -9,4 +9,6 @@ class AppRoutes {
   static const String hobbies = "$settings/hobbies";
   static const String settingSettings = '$settings/settings';
   static const String trainig = '$settings/training';
+  static const String profileInfo = '$settings/profileInfo';
+  static const String forgetPassword = '$settings/forgetPassword';
 }

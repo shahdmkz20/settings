@@ -2,16 +2,15 @@ import 'package:articles/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../controller/settings/settings_controller.dart';
-
 class CustomCard extends StatelessWidget {
   final int index;
   final List<dynamic> list;
-  const CustomCard({super.key, required this.index, required this.list});
+  final void Function(int)? onTap;
+  const CustomCard(
+      {super.key, required this.index, required this.list, this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    SettingsController controller = Get.put(SettingsController());
     return Container(
       decoration: BoxDecoration(
         boxShadow: [
@@ -28,7 +27,9 @@ class CustomCard extends StatelessWidget {
         elevation: 0,
         child: InkWell(
           onTap: () {
-            controller.goToPage(index);
+            if (onTap != null) {
+              onTap!(index);
+            }
           },
           child: Container(
             padding: const EdgeInsets.all(8.0),

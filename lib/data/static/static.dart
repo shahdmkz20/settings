@@ -2,8 +2,7 @@ import 'package:articles/core/constants/colors.dart';
 import 'package:articles/model/settings/jobs_description_model.dart';
 import 'package:articles/model/settings/settings_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
+
 import '../../model/settings/saved_cat_model.dart';
 import '../../model/settings/settings_sections.dart';
 
@@ -99,4 +98,16 @@ List<dynamic> settingsGeneralList = [
 List<dynamic> settingsAppList = [
   SettingsModel(listId: 1, name: 'حجم الخط', icon: Icons.text_format),
   SettingsModel(listId: 2, name: "حول", icon: Icons.circle),
+];
+
+List<IconData> profileSettingsIcons = [
+  Icons.phone_outlined,
+  Icons.facebook_outlined,
+  Icons.inbox_outlined,
+  Icons.email_outlined,
+];
+
+List<IconData> profileGeneralInfo = [
+  Icons.boy_outlined,
+  Icons.cake_outlined,
 ];
