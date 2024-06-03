@@ -7,6 +7,8 @@ import 'package:get/get.dart';
 abstract class SettingsSavedControllerABS extends GetxController {
   late TextEditingController searchController;
   late List<UserlistModel> usersList;
+  late TextEditingController itemName;
+  addItem(String itemName);
   searchForItem();
   goToScreen(int index);
 }
@@ -23,5 +25,25 @@ class SettingsSavedController extends SettingsSavedControllerABS {
       case 0:
         Get.toNamed(AppRoutes.news);
     }
+  }
+
+  @override
+  void onInit() {
+    itemName = TextEditingController();
+    super.onInit();
+  }
+
+  @override
+  void dispose() {
+    itemName.dispose();
+    super.dispose();
+  }
+
+  @override
+  addItem(String itemName) {
+    final int newId = userList.length + 1;
+    final newUser = UserlistModel(listId: newId, name: itemName);
+    userList.add(newUser);
+    update();
   }
 }

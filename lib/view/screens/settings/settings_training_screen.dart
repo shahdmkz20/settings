@@ -33,12 +33,12 @@ class SettingsTrainingScreen extends StatelessWidget {
                   height: Get.height * 0.03,
                 ),
                 DescriptionContainer(
-                    //   height: Get.height * 0.22,
+                    height: Get.height * 0.20,
                     title: 'وصف الفرصة',
                     subtitle: false,
                     jobDescription: controller.trainingModel.description),
                 DescriptionContainer(
-                    //   height: Get.height * 0.20,
+                    height: Get.height * 0.25,
                     pointsShape: 1,
                     jobDescription: '',
                     title: 'محاور التدريب',
@@ -47,7 +47,7 @@ class SettingsTrainingScreen extends StatelessWidget {
                     listLength: controller.trainingModel.topics.length,
                     list: controller.trainingModel.topics),
                 DescriptionContainer(
-                    //  height: Get.height * 0.15,
+                    height: Get.height * 0.20,
                     pointsShape: 1,
                     jobDescription: '',
                     title: 'مخرجات التدريب',

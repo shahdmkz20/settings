@@ -1,7 +1,9 @@
 import 'package:articles/core/constants/colors.dart';
 import 'package:articles/model/settings/jobs_description_model.dart';
+import 'package:articles/model/settings/settings_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import '../../model/settings/saved_cat_model.dart';
 import '../../model/settings/settings_sections.dart';
 
@@ -80,4 +82,21 @@ List<String> advList = [
   'ادارة الاعمال' //2
   ,
   'التسويق' //3
+];
+
+List<dynamic> settingsGeneralList = [
+  SettingsModel(
+      listId: 1,
+      name: 'الحساب والملف الشخصي',
+      icon: Icons.account_circle_outlined),
+  SettingsModel(listId: 2, name: 'تغيير كلمة السر', icon: Icons.lock_outline),
+  SettingsModel(
+      listId: 3,
+      name: 'ادارة الاشعارات',
+      icon: Icons.notification_important_outlined),
+];
+
+List<dynamic> settingsAppList = [
+  SettingsModel(listId: 1, name: 'حجم الخط', icon: Icons.text_format),
+  SettingsModel(listId: 2, name: "حول", icon: Icons.circle),
 ];

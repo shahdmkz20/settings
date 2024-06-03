@@ -5,11 +5,13 @@ import '../../../../controller/settings/settings_controller.dart';
 
 class SettingsAppbar extends StatelessWidget {
   final bool haveImage;
+  final bool haveSearch;
   final void Function()? onTap;
   const SettingsAppbar({
     super.key,
     this.haveImage = false,
     required this.onTap,
+    this.haveSearch = false,
   });
 
   @override
@@ -30,6 +32,17 @@ class SettingsAppbar extends StatelessWidget {
               ),
             ),
           const Spacer(),
+          if (haveSearch)
+            InkWell(
+              onTap: onTap,
+              child: Container(
+                margin: const EdgeInsets.only(left: 3),
+                child: Icon(
+                  size: Get.width * 0.07,
+                  Icons.search,
+                ),
+              ),
+            ),
           InkWell(
             onTap: onTap,
             child: Icon(

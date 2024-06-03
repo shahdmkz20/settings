@@ -6,12 +6,16 @@ class CustomMediumTitle extends StatelessWidget {
   final bool addIcon;
   final Icon icon;
   final void Function()? onTap;
+  final TextStyle? style;
+  final bool changeStyle;
   const CustomMediumTitle(
       {super.key,
       required this.text,
       this.addIcon = false,
       this.icon = const Icon(Icons.deblur),
-      this.onTap});
+      this.onTap,
+      this.style,
+      this.changeStyle = false});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,8 @@ class CustomMediumTitle extends StatelessWidget {
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
             text,
-            style: Theme.of(context).textTheme.titleMedium,
+            style:
+                changeStyle ? style : Theme.of(context).textTheme.titleMedium,
           ),
         ),
         addIcon == true

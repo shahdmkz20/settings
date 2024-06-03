@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../model/settings/settings_sections.dart';
-
 import '../cards/settings_custom_card.dart';
 
 class CustomCardList extends StatelessWidget {

@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 class Defaultscreens extends StatelessWidget {
   final Widget child;
   final bool haveImage;
+  final bool haveSearch;
   final void Function()? onTap;
   const Defaultscreens(
-      {super.key, required this.child, this.haveImage = false, this.onTap});
+      {super.key,
+      required this.child,
+      this.haveImage = false,
+      this.onTap,
+      this.haveSearch = false});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +19,7 @@ class Defaultscreens extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: SettingsAppbar(
+          haveSearch: haveSearch,
           onTap: onTap,
           haveImage: haveImage,
         ),

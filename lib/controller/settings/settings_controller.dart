@@ -38,6 +38,9 @@ class SettingsController extends SettingsControllerABS {
       case 4:
         Get.toNamed(AppRoutes.advertisment);
         break;
+      case 5:
+        Get.toNamed(AppRoutes.settingSettings);
+        break;
     }
   }
 

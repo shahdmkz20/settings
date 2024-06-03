@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../controller/settings/settings_controller.dart';
-import '../../../../model/settings/settings_sections.dart';
 
 class CustomCard extends StatelessWidget {
   final int index;

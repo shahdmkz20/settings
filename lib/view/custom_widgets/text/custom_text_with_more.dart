@@ -3,9 +3,17 @@ import 'package:flutter/material.dart';
 class CustomTextWithMore extends StatelessWidget {
   final String title;
   final bool more;
+  final bool changeStyle;
   final void Function()? onTap;
-  const CustomTextWithMore(
-      {super.key, required this.title, this.more = false, this.onTap});
+  final TextStyle? style;
+  const CustomTextWithMore({
+    super.key,
+    required this.title,
+    this.more = false,
+    this.onTap,
+    this.changeStyle = false,
+    this.style,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +24,7 @@ class CustomTextWithMore extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.titleSmall,
+          style: changeStyle ? style : Theme.of(context).textTheme.titleSmall,
         ),
         more == true
             ? InkWell(
