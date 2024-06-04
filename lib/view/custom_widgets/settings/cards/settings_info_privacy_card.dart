@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/constants/colors.dart';
@@ -37,7 +39,10 @@ class SettingsInfoPrivacyCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Icon(privacyMode > 0 ? Icons.analytics : Icons.lock_outline,
+                    Icon(
+                        privacyMode > 0
+                            ? FontAwesomeIcons.earthAmericas
+                            : Icons.lock_outline,
                         size: Get.width * 0.035),
                     SizedBox(
                       width: Get.width * 0.02,

@@ -29,7 +29,7 @@ class SettingsProfileInfoList extends StatelessWidget {
                 : (general
                     ? profileGeneralInfo[index]
                     : profileSettingsIcons[index]),
-            privacyMode: 0,
+            privacyMode: 1,
             fieldText: list[index]);
       },
       separatorBuilder: (BuildContext context, int index) {

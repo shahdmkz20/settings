@@ -20,7 +20,7 @@ class SettingsForgetPassword extends StatelessWidget {
         return SingleChildScrollView(
           child: Column(
             children: [
-              CustomMediumTitle(
+              const CustomMediumTitle(
                 text: 'تغيير كلمة السر',
               ),
               SizedBox(
@@ -31,13 +31,13 @@ class SettingsForgetPassword extends StatelessWidget {
                 obscureText: controller.isOldPasswordVisible,
                 decoration: InputDecoration(
                   hintText: 'كلمة السر القديمة',
-                  hintStyle:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
+                  hintStyle: const TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.w300),
                   prefixIcon: InkWell(
                     onTap: controller.showOldPass,
                     child: controller.isOldPasswordVisible
-                        ? Icon(Icons.visibility_off_outlined)
-                        : Icon(Icons.visibility_outlined),
+                        ? const Icon(Icons.visibility_off_outlined)
+                        : const Icon(Icons.visibility_outlined),
                   ),
                 ),
               ),
@@ -49,13 +49,13 @@ class SettingsForgetPassword extends StatelessWidget {
                 obscureText: controller.isNewPasswordVisible,
                 decoration: InputDecoration(
                   hintText: 'كلمة السر الجديدة',
-                  hintStyle:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
+                  hintStyle: const TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.w300),
                   prefixIcon: InkWell(
                     onTap: controller.showPass,
                     child: controller.isNewPasswordVisible
-                        ? Icon(Icons.visibility_outlined)
-                        : Icon(Icons.visibility_off_outlined),
+                        ? const Icon(Icons.visibility_outlined)
+                        : const Icon(Icons.visibility_off_outlined),
                   ),
                 ),
               ),
@@ -67,13 +67,13 @@ class SettingsForgetPassword extends StatelessWidget {
                 obscureText: controller.isConfirmPasswordVisible,
                 decoration: InputDecoration(
                   hintText: 'تأكيد كلمة السر',
-                  hintStyle:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
+                  hintStyle: const TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.w300),
                   prefixIcon: InkWell(
                     onTap: controller.showCofirmPass,
                     child: controller.isConfirmPasswordVisible
-                        ? Icon(Icons.visibility_off_outlined)
-                        : Icon(Icons.visibility_outlined),
+                        ? const Icon(Icons.visibility_off_outlined)
+                        : const Icon(Icons.visibility_outlined),
                   ),
                 ),
               ),

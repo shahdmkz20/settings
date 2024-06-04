@@ -84,8 +84,26 @@ class SettingsProfileSettingsController
         Get.toNamed(AppRoutes.forgetPassword);
         break;
       case 2:
-        Get.toNamed(AppRoutes.hobbies);
+        Get.toNamed(AppRoutes.notificationControls);
         break;
+      case 3:
+        Get.toNamed(AppRoutes.hobbies);
+    }
+  }
+
+  goToPage2(int index) {
+    switch (index) {
+      case 0:
+        Get.toNamed(AppRoutes.textSize);
+        break;
+      case 1:
+        Get.toNamed(AppRoutes.forgetPassword);
+        break;
+      case 2:
+        Get.toNamed(AppRoutes.notificationControls);
+        break;
+      case 3:
+        Get.toNamed(AppRoutes.hobbies);
     }
   }
 }

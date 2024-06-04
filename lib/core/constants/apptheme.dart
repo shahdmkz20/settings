@@ -36,7 +36,7 @@ ThemeData ArabicTheme = ThemeData(
       //عناوين فرعية
       titleSmall: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
       //التبويبات
-      displayMedium: TextStyle(fontSize: 16),
+      displayMedium: TextStyle(fontSize: 18),
       displaySmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
       //فقرات
       bodyLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w300),

@@ -4,10 +4,12 @@ import 'package:articles/view/screens/settings/settings_home_screen.dart';
 import 'package:articles/view/screens/settings/settings_job_info.dart';
 import 'package:articles/view/screens/settings/settings_jobs_screen.dart';
 import 'package:articles/view/screens/settings/settings_news_screen.dart';
+import 'package:articles/view/screens/settings/settings_notifications_controller_screen.dart';
 import 'package:articles/view/screens/settings/settings_profile_info_screen.dart';
 import 'package:articles/view/screens/settings/settings_profile_settings_screen.dart';
 import 'package:articles/view/screens/settings/settings_records_screen.dart';
 import 'package:articles/view/screens/settings/settings_saved_screen.dart';
+import 'package:articles/view/screens/settings/settings_text_size_screen.dart';
 import 'package:articles/view/screens/settings/settings_training_screen.dart';
 import 'package:get/get.dart';
 
@@ -38,4 +40,8 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoutes.forgetPassword,
       page: () => const SettingsForgetPassword()),
+  GetPage(
+      name: AppRoutes.notificationControls,
+      page: () => const SettingsNotificationsControlsScreen()),
+  GetPage(name: AppRoutes.textSize, page: () => const SettingsTextSizeScreen()),
 ];

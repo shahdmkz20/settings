@@ -2,6 +2,9 @@ import 'package:articles/core/constants/colors.dart';
 import 'package:articles/model/settings/jobs_description_model.dart';
 import 'package:articles/model/settings/settings_model.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttericon/brandico_icons.dart';
+import 'package:fluttericon/elusive_icons.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 
 import '../../model/settings/saved_cat_model.dart';
 import '../../model/settings/settings_sections.dart';
@@ -96,18 +99,37 @@ List<dynamic> settingsGeneralList = [
 ];
 
 List<dynamic> settingsAppList = [
-  SettingsModel(listId: 1, name: 'حجم الخط', icon: Icons.text_format),
-  SettingsModel(listId: 2, name: "حول", icon: Icons.circle),
+  SettingsModel(listId: 1, name: 'حجم الخط', icon: Elusive.text_height),
+  SettingsModel(listId: 2, name: "حول", icon: FontAwesome5.exclamation_circle),
 ];
 
 List<IconData> profileSettingsIcons = [
   Icons.phone_outlined,
   Icons.facebook_outlined,
-  Icons.inbox_outlined,
+  Brandico.linkedin_1,
   Icons.email_outlined,
 ];
 
 List<IconData> profileGeneralInfo = [
   Icons.boy_outlined,
   Icons.cake_outlined,
+];
+
+List<List<dynamic>> notificationsList = [
+  ['الأحدث تريند', Icons.trending_up],
+  ['توصياتنا', Icons.volume_up_outlined],
+  ['بودكاست تتابعه', Icons.volume_up_outlined],
+  ['تحذيرات أمنية', Icons.shield_outlined],
+];
+
+String textDisc =
+    'لأننا نريد أن يكون هذا التطبيق مرجعًا لكم ولأننا نسعى دائمًا لتكون رؤيتنا واضحة لكم.';
+
+List<String> textSizeList = ['64px', '32px', '16px'];
+List<String> dropDownTitles = [
+  'الواجهة الرئيسية',
+  'الأخبار',
+  'المقالات',
+  'البودكاست',
+  'قوائمك'
 ];

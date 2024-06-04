@@ -11,4 +11,6 @@ class AppRoutes {
   static const String trainig = '$settings/training';
   static const String profileInfo = '$settings/profileInfo';
   static const String forgetPassword = '$settings/forgetPassword';
+  static const String notificationControls = '$settings/notificationControls';
+  static const String textSize = '$settings/textSize';
 }

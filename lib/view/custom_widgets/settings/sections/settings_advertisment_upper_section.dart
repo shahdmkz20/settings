@@ -31,7 +31,7 @@ class AdvertismentUpperSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SettingsDropDownMenu(
+          CustomDropDownMenu(
               dropDownListValues: dropDownListValues,
               isSelected: isSelected,
               selectedVal: selectedVal,

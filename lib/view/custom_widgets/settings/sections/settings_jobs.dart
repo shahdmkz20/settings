@@ -25,7 +25,7 @@ class SettingsJobsUpperSection extends StatelessWidget {
               margin: EdgeInsets.only(top: Get.height * 0.02),
               child: Row(
                 children: [
-                  SettingsDropDownMenu(
+                  CustomDropDownMenu(
                     dropDownListValues: jobField,
                     isSelected: controller.selectedJobFieldVal.isNotEmpty,
                     selectedVal: controller.selectedJobFieldVal,
@@ -35,7 +35,7 @@ class SettingsJobsUpperSection extends StatelessWidget {
                       controller.selectedJobField = jobField.indexOf(val!);
                     },
                   ),
-                  SettingsDropDownMenu(
+                  CustomDropDownMenu(
                     dropDownListValues: jobWorkTime,
                     isSelected: controller.selectedJobWorkTimeVal.isNotEmpty,
                     selectedVal: controller.selectedJobWorkTimeVal,
@@ -46,7 +46,7 @@ class SettingsJobsUpperSection extends StatelessWidget {
                           jobWorkTime.indexOf(val!);
                     },
                   ),
-                  SettingsDropDownMenu(
+                  CustomDropDownMenu(
                     dropDownListValues: jobsType,
                     isSelected: controller.selectedJobTypeVal.isNotEmpty,
                     selectedVal: controller.selectedJobTypeVal,

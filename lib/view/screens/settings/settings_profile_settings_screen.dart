@@ -69,7 +69,12 @@ class SettingsProfileSettingsScreen extends StatelessWidget {
                   SizedBox(
                     height: Get.height * 0.01,
                   ),
-                  CustomCardList(list: settingsAppList),
+                  CustomCardList(
+                    list: settingsAppList,
+                    onTap: (index) {
+                      controller.goToPage2(index);
+                    },
+                  ),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
