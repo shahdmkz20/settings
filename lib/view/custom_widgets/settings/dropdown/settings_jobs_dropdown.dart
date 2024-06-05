@@ -1,3 +1,4 @@
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../core/constants/colors.dart';
@@ -36,14 +37,13 @@ class CustomDropDownMenu extends StatelessWidget {
         child: DropdownButton<String>(
             hint: Text(
               isSelected ? selectedVal : defaultListValue,
-              style: Theme.of(context).textTheme.displayMedium,
+              style: displayMedium18,
             ),
             value: isSelected ? selectedVal : null,
             items: dropDownListValues.map((String value) {
               return DropdownMenuItem<String>(
                 value: value,
-                child: Text(
-                    style: Theme.of(context).textTheme.displayMedium, value),
+                child: Text(style: displayMedium18, value),
               );
             }).toList(),
             onChanged: onChanged),

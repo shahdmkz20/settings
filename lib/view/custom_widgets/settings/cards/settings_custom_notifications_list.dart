@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/constants/colors.dart';
+import '../../../../core/constants/styles.dart';
 import '../../../../core/functions/returnTimeDifference.dart';
 
 class CustomNotificationsCard extends StatelessWidget {
@@ -49,18 +50,14 @@ class CustomNotificationsCard extends StatelessWidget {
                   Text(
                     notificationModel.notificationTitle,
                     overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: AppColors.defaultTextIconsColor,
-                        fontWeight: FontWeight.normal),
+                    style: paragraphStyle,
                   ),
                   SizedBox(
                     height: Get.height * 0.01,
                   ),
                   Text(
                     "  منذ ${timeDifferenceFromNow(notificationModel.notificationDate)}",
-                    style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                          color: AppColors.defaultTextIconsColor,
-                        ),
+                    style: styleBold16,
                   ),
                 ],
               ),

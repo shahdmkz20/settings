@@ -2,6 +2,8 @@ import 'package:articles/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../core/constants/styles.dart';
+
 class CustomCard extends StatelessWidget {
   final int index;
   final List<dynamic> list;
@@ -41,7 +43,7 @@ class CustomCard extends StatelessWidget {
                 ),
                 Text(
                   list[index].name,
-                  style: Theme.of(context).textTheme.bodyLarge,
+                  style: bodyLarge24,
                 )
               ],
             ),

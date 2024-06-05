@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../../core/constants/colors.dart';
+import '../../../../../core/constants/styles.dart';
 
 class CustomDialogTextformfield extends StatelessWidget {
   final TextEditingController controller;
@@ -23,10 +24,7 @@ class CustomDialogTextformfield extends StatelessWidget {
             contentPadding: EdgeInsets.zero,
             isDense: true,
             border: InputBorder.none,
-            hintStyle: Theme.of(context)
-                .textTheme
-                .bodyMedium!
-                .copyWith(color: AppColors.primaryBackGroundColor),
+            hintStyle: whitebodyMedium32,
             hintText: hintText),
       ),
     );

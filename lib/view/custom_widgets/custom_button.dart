@@ -1,3 +1,4 @@
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/colors.dart';
@@ -17,12 +18,8 @@ class CustomButton extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             color: AppColors.secondryBackGroundColor),
-        child: Text(text,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w800,
-                color: AppColors.primaryBackGroundColor)),
+        child:
+            Text(text, textAlign: TextAlign.center, style: whitebodyMedium32),
       ),
     );
   }

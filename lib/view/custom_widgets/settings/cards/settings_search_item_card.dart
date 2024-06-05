@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class SettingsSearchItemCard extends StatelessWidget {
   final String text;
-  const SettingsSearchItemCard({super.key, required this.text});
+  final void Function()? onTap;
+  const SettingsSearchItemCard({super.key, required this.text, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class SettingsSearchItemCard extends StatelessWidget {
               margin: EdgeInsets.only(left: 10), child: Icon(Icons.history)),
           Text(text),
           Spacer(),
-          Icon(Icons.close),
+          InkWell(onTap: onTap, child: Icon(Icons.close)),
         ],
       ),
     );
@@ -23,7 +24,9 @@ class SettingsSearchItemCard extends StatelessWidget {
 
 class SettingsSearchItemCardList extends StatelessWidget {
   final List<String> latestSearchs;
-  const SettingsSearchItemCardList({super.key, required this.latestSearchs});
+  final void Function(int)? onTap;
+  const SettingsSearchItemCardList(
+      {super.key, required this.latestSearchs, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +37,11 @@ class SettingsSearchItemCardList extends StatelessWidget {
         itemBuilder: (context, index) {
           return SettingsSearchItemCard(
             text: latestSearchs[index],
+            onTap: () {
+              if (onTap != null) {
+                onTap!(index);
+              }
+            },
           );
         });
   }

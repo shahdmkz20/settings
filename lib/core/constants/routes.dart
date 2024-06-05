@@ -1,4 +1,11 @@
 class AppRoutes {
+  static const String splash = '/splash';
+  static const String login = '/login';
+  static const String register = '/register';
+  static const String interst = '/interst';
+  static const String change = '/change';
+  static const String verify = '/verify';
+  static const String mainarticle = '/mainarticle';
   static const String settings = '/settings';
   static const String settingsJobs = "$settings/jobs";
   static const String jobInfo = "$settings/jobInfo";

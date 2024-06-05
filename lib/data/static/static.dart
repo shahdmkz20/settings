@@ -52,7 +52,7 @@ List<JobDescription> jobDescription = [
 List<SavedCat> savedCategories = [
   SavedCat(
       title: 'الأخبار',
-      color: AppColors.accent,
+      color: AppColors.colorOrange,
       icon: Icons.ads_click_outlined),
   SavedCat(
       title: 'المقالات',

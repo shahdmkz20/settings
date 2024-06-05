@@ -1,4 +1,5 @@
 import 'package:articles/core/constants/apptheme.dart';
+import 'package:articles/core/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -6,9 +7,9 @@ import 'core/localizations/translation.dart';
 import 'core/services/services.dart';
 import 'routes.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initialServices();
+  await initialSercices();
   runApp(const MyApp());
 }
 
@@ -19,9 +20,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      theme: ArabicTheme,
       getPages: routes,
-      //initialBinding: InitBindings,
+      initialRoute: AppRoutes.splash,
     );
   }
 }

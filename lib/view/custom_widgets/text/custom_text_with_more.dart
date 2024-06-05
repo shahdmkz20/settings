@@ -1,3 +1,4 @@
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextWithMore extends StatelessWidget {
@@ -22,16 +23,13 @@ class CustomTextWithMore extends StatelessWidget {
           ? MainAxisAlignment.start
           : MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          title,
-          style: changeStyle ? style : Theme.of(context).textTheme.titleSmall,
-        ),
+        Text(title, style: changeStyle ? style : titleSmall16),
         more == true
             ? InkWell(
                 onTap: onTap,
                 child: Text(
                   'المزيد',
-                  style: Theme.of(context).textTheme.titleSmall,
+                  style: titleSmall16,
                 ))
             : Container(),
       ],

@@ -1,32 +1,44 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPrefsUtil {
-  static const String _keyLatestSearches = 'latestSearches';
+  static const String _keyLatestSearches = 'recentSearches';
 
-  // Save a list of strings to SharedPreferences
-  static Future<void> saveLatestSearches(List<String> searches) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList(_keyLatestSearches, searches);
+  static Future<List<String>> getRecentSearchesLike(String query) async {
+    final pref = await SharedPreferences.getInstance();
+    final allSearches = pref.getStringList("recentSearches");
+    return allSearches!.where((search) => search.startsWith(query)).toList();
   }
 
-  // Retrieve the list of strings from SharedPreferences
-  static Future<List<String>> getLatestSearches() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getStringList(_keyLatestSearches) ?? [];
-  }
+  static Future<void> saveToRecentSearches(String searchText) async {
+    // ignore: unnecessary_null_comparison
+    if (searchText == null) return; //Should not be null
+    final pref = await SharedPreferences.getInstance();
 
-  // Add a new search to the list and save it
-  static Future<void> addLatestSearch(String search) async {
-    List<String> searches = await getLatestSearches();
-    if (!searches.contains(search)) {
-      searches.add(search);
-      await saveLatestSearches(searches);
-    }
+    //Use `Set` to avoid duplication of recentSearches
+    Set<String> allSearches =
+        pref.getStringList("recentSearches")?.toSet() ?? {};
+
+    //Place it at first in the set
+    allSearches = {searchText, ...allSearches};
+    pref.setStringList("recentSearches", allSearches.toList());
   }
 
   // Clear all searches
   static Future<void> clearLatestSearches() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyLatestSearches);
+  }
+
+  // Clear a specific item from recentSearches list
+  static Future<void> clearSearchItem(String searchItem) async {
+    // ignore: unnecessary_null_comparison
+    if (searchItem == null) return; // Don't proceed if searchItem is null
+
+    final prefs = await SharedPreferences.getInstance();
+    List<String> allSearches = prefs.getStringList(_keyLatestSearches) ?? [];
+
+    allSearches.remove(searchItem);
+
+    await prefs.setStringList(_keyLatestSearches, allSearches);
   }
 }

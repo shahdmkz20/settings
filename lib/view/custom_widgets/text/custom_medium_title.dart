@@ -1,4 +1,5 @@
 import 'package:articles/core/constants/colors.dart';
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomMediumTitle extends StatelessWidget {
@@ -30,8 +31,7 @@ class CustomMediumTitle extends StatelessWidget {
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
             text,
-            style:
-                changeStyle ? style : Theme.of(context).textTheme.titleMedium,
+            style: changeStyle ? style : titleMedium32,
           ),
         ),
         addIcon == true

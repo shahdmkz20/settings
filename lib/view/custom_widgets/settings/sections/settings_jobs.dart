@@ -1,4 +1,4 @@
-import 'package:articles/controller/settings/settings_controller.dart';
+import 'package:articles/view/screens/settings/home_screen/controller/settings_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

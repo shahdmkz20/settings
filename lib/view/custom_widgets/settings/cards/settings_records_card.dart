@@ -2,8 +2,9 @@ import 'package:articles/model/settings/record_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../controller/settings/settings_records_controller.dart';
+import '../../../screens/settings/records_screen/controller/settings_records_controller.dart';
 import '../../../../core/constants/colors.dart';
+import '../../../../core/constants/styles.dart';
 
 class SettingsRecordsCard extends StatelessWidget {
   final RecordModel recordModel;
@@ -20,57 +21,53 @@ class SettingsRecordsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 15),
+      margin: const EdgeInsets.only(bottom: 15),
       child: Stack(
         children: [
-          SizedBox(
+          Container(
+            width: Get.width,
             height: Get.height * 0.1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 10,
+                  spreadRadius: 1,
+                  color: Colors.grey.withOpacity(0.1),
+                )
+              ],
+              borderRadius: BorderRadius.circular(5),
+              color: AppColors.primaryCardColor,
+            ),
+            child: Row(
               children: [
                 Container(
-                  width: Get.width,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 10,
-                        spreadRadius: 1,
-                        color: Colors.grey.withOpacity(0.1),
-                      )
-                    ],
-                    borderRadius: BorderRadius.circular(5),
-                    color: AppColors.primaryCardColor,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: const BoxDecoration(shape: BoxShape.circle),
+                  child: Image.network(
+                    recordModel.personImageUrl,
+                    width: Get.width * 0.18,
                   ),
-                  child: Row(
+                ),
+                SizedBox(
+                  width: Get.width * 0.6,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        clipBehavior: Clip.antiAlias,
-                        decoration: const BoxDecoration(shape: BoxShape.circle),
-                        child: Image.network(
-                          recordModel.personImageUrl,
-                          width: Get.width * 0.18,
-                        ),
+                      Text(
+                        recordModel.title,
+                        style: bodyMedium16,
+                        overflow: TextOverflow.ellipsis,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            recordModel.title,
-                            style: Theme.of(context).textTheme.bodySmall,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          Text(
-                            recordModel.subtitle,
-                            style: Theme.of(context).textTheme.bodySmall,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ],
+                      Text(
+                        recordModel.subtitle,
+                        style: styleBold16,
+                        overflow: TextOverflow.ellipsis,
                       ),
-                      const Icon(Icons.more_vert),
                     ],
                   ),
                 ),
+                const Icon(Icons.more_vert),
               ],
             ),
           ),

@@ -1,3 +1,4 @@
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 // Make sure to import necessary packages for SvgPicture and Get
 import 'package:flutter_svg/flutter_svg.dart'; // for SvgPicture
@@ -24,7 +25,7 @@ class SettingsProfileDownSection extends StatelessWidget {
       children: [
         iconOrImage
             ? SvgPicture.asset(
-                ImageAssets.powerOff,
+                AppImages.powerOff,
                 color: AppColors.dangerColor,
                 width: Get.width * 0.065,
               )
@@ -36,7 +37,7 @@ class SettingsProfileDownSection extends StatelessWidget {
           onTap: onTap,
           child: Text(
             text,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: bodyLarge64,
           ),
         ),
       ],

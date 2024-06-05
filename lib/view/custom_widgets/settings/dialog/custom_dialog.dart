@@ -1,4 +1,5 @@
 import 'package:articles/core/constants/colors.dart';
+import 'package:articles/core/constants/styles.dart';
 import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
 import 'package:articles/view/custom_widgets/text/custom_text_with_more.dart';
 import 'package:flutter/cupertino.dart';
@@ -50,13 +51,7 @@ class CustomDialog extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Center(
-                      child: Text(
-                        text,
-                        style: Theme.of(context)
-                            .textTheme
-                            .displayMedium!
-                            .copyWith(color: AppColors.primaryBackGroundColor),
-                      ),
+                      child: Text(text, style: whiteDisplayMedium32),
                     ),
                   ],
                 )
@@ -68,21 +63,14 @@ class CustomDialog extends StatelessWidget {
                       child: CustomMediumTitle(
                         text: title,
                         changeStyle: true,
-                        style: Theme.of(context)
-                            .textTheme
-                            .displayMedium!
-                            .copyWith(color: AppColors.primaryBackGroundColor),
+                        style: whiteDisplayMedium32,
                       ),
                     ),
                     deleteAccount
                         ? CustomTextWithMore(
                             title: content,
                             changeStyle: true,
-                            style: Theme.of(context)
-                                .textTheme
-                                .displayMedium!
-                                .copyWith(
-                                    color: AppColors.primaryBackGroundColor),
+                            style: whiteDisplayMedium32,
                           )
                         : Container(),
                     deleteAccount

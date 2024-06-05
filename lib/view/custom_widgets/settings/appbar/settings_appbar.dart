@@ -2,7 +2,7 @@ import 'package:articles/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../controller/settings/settings_controller.dart';
+import '../../../screens/settings/home_screen/controller/settings_controller.dart';
 
 class SettingsAppbar extends StatelessWidget {
   final bool haveImage;
@@ -61,7 +61,7 @@ class SettingsAppbar extends StatelessWidget {
                   ? Icons.notifications_active_outlined
                   : Icons.arrow_forward,
               size: Get.width * 0.08,
-              color: notiIcon ? AppColors.accent : Colors.black,
+              color: notiIcon ? AppColors.colorOrange : Colors.black,
             ),
           ),
         ],

@@ -4,6 +4,7 @@ import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/constants/colors.dart';
+import '../../../../core/constants/styles.dart';
 
 class SettingsInfoPrivacyCard extends StatelessWidget {
   final IconData icon;
@@ -35,7 +36,7 @@ class SettingsInfoPrivacyCard extends StatelessWidget {
               children: [
                 Text(
                   fieldText,
-                  style: const TextStyle(fontSize: 15),
+                  style: paragraphStyle,
                 ),
                 Row(
                   children: [
@@ -49,7 +50,7 @@ class SettingsInfoPrivacyCard extends StatelessWidget {
                     ),
                     Text(
                       privacyMode > 0 ? 'الجميع' : 'فقط انا ',
-                      style: const TextStyle(fontSize: 12),
+                      style: styleRegular12,
                     )
                   ],
                 ),

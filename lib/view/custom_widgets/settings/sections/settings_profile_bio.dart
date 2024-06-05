@@ -1,5 +1,6 @@
 import 'package:articles/core/constants/colors.dart';
 import 'package:articles/core/constants/images.dart';
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -31,24 +32,21 @@ class SettingsProfileBio extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                person.name,
-                style: Theme.of(context).textTheme.titleSmall,
-              ),
+              Text(person.name, style: titleSmall16),
               const Text("نبذة"),
               Row(
                 children: [
                   Expanded(
                     child: Text(
                       person.bio,
-                      style: Theme.of(context).textTheme.displaySmall,
+                      style: displaySmall16,
                       overflow:
                           TextOverflow.visible, // Add ellipsis for long text
                     ),
                   ),
                   SvgPicture.asset(
                     color: AppColors.dangerColor,
-                    ImageAssets.powerOff,
+                    AppImages.powerOff,
                     width: Get.width * 0.065,
                   )
                 ],

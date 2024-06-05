@@ -1,9 +1,10 @@
-import 'package:articles/controller/settings/settings_saved_controller.dart';
+import 'package:articles/view/screens/settings/saveds_screen/controller/settings_saved_controller.dart';
 import 'package:articles/model/settings/saved_cat_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/constants/colors.dart';
+import '../../../../core/constants/styles.dart';
 
 class SettingsSavedCat extends StatelessWidget {
   final SavedCat savedCat;
@@ -36,7 +37,7 @@ class SettingsSavedCat extends StatelessWidget {
           SizedBox(
             height: Get.height * 0.01,
           ),
-          Text(savedCat.title, style: Theme.of(context).textTheme.bodyMedium),
+          Text(savedCat.title, style: bodyMedium16),
         ],
       ),
     );

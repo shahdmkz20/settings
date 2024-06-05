@@ -22,7 +22,7 @@ class CustomSwitchTile extends StatelessWidget {
       contentPadding: const EdgeInsets.symmetric(horizontal: 0),
       dense: false,
       secondary: Icon(icon),
-      activeTrackColor: AppColors.accent,
+      activeTrackColor: AppColors.colorOrange,
       inactiveTrackColor: AppColors.colorIcon,
       inactiveThumbColor: AppColors.primaryCardColor,
       title: Text(title),

@@ -48,7 +48,7 @@ class SettingsImageContainerWithStack extends StatelessWidget {
           child: SvgPicture.asset(
               color: AppColors.textGreyColor,
               width: Get.width * 0.05,
-              ImageAssets.forwardArrow),
+              AppImages.forwardArrow),
         )
       ],
     );

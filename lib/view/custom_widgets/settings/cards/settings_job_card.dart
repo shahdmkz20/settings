@@ -1,9 +1,10 @@
-import 'package:articles/controller/settings/settings_controller.dart';
+import 'package:articles/view/screens/settings/home_screen/controller/settings_controller.dart';
 import 'package:articles/core/constants/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
+import '../../../../core/constants/styles.dart';
 import '../../../../model/settings/jobs_model.dart';
 import '../../../../model/settings/news_model.dart';
 
@@ -82,8 +83,7 @@ class SettingsJobNewsCard extends StatelessWidget {
                                     news
                                         ? newsModel[index].source
                                         : job[index].jobTitle,
-                                    style:
-                                        Theme.of(context).textTheme.titleSmall,
+                                    style: styleBold16,
                                     overflow: TextOverflow.visible,
                                   ),
                                 ),
@@ -111,9 +111,7 @@ class SettingsJobNewsCard extends StatelessWidget {
                                     child: Text(
                                       job[index].title,
                                       textAlign: TextAlign.start,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall,
+                                      style: styleBold16,
                                       overflow: TextOverflow.clip,
                                     ),
                                   ),
@@ -156,7 +154,7 @@ class SettingsJobNewsCard extends StatelessWidget {
                                       onTap: onTap,
                                       child: SvgPicture.asset(
                                         width: Get.width * 0.05,
-                                        ImageAssets.forwardArrow,
+                                        AppImages.forwardArrow,
                                       ),
                                     ),
                                   ],

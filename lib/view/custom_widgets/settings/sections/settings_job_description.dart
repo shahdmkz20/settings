@@ -1,3 +1,4 @@
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +36,7 @@ class DescriptionContainer extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.titleSmall,
+            style: titleSmall16,
           ),
           SizedBox(
             height: Get.height * 0.01,
@@ -43,7 +44,7 @@ class DescriptionContainer extends StatelessWidget {
           subtitle == true
               ? Text(
                   subTitle,
-                  style: Theme.of(context).textTheme.displayMedium,
+                  style: displayMedium18,
                 )
               : Container(),
           more == false ? Expanded(child: Text(jobDescription)) : Container(),
@@ -58,7 +59,7 @@ class DescriptionContainer extends StatelessWidget {
                         pointsShape == 0
                             ? '${index + 1}- ${list[index]}'
                             : '- ${list[index]}',
-                        style: Theme.of(context).textTheme.bodySmall,
+                        style: bodyMedium32,
                       );
                     },
                   ),

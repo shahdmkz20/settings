@@ -1,4 +1,5 @@
-import 'package:articles/controller/settings/settings_news_controller.dart';
+import 'package:articles/view/screens/settings/news_screen/controller/settings_news_controller.dart';
+import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,7 +33,7 @@ class CustomTabBar extends StatelessWidget {
                   bottom: BorderSide(
                     width: 3,
                     color: controller.selected == index
-                        ? AppColors.accent
+                        ? AppColors.colorOrange
                         : Colors.transparent,
                   ),
                 ),
@@ -41,14 +42,10 @@ class CustomTabBar extends StatelessWidget {
                 onTap: () {
                   controller.categoryChanged(index);
                 },
-                child: Text(
-                  tabsNames[index],
-                  style: controller.selected == index
-                      ? Theme.of(context).textTheme.titleSmall
-                      : Theme.of(context).textTheme.displayMedium?.copyWith(
-                          color:
-                              AppColors.defaultTextIconsColor.withOpacity(0.5)),
-                ),
+                child: Text(tabsNames[index],
+                    style: controller.selected == index
+                        ? titleSmall16
+                        : displayMedium18),
               ),
             );
           },
