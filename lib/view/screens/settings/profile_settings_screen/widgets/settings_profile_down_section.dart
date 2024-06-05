@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // for SvgPicture
 import 'package:get/get.dart';
 
-import '../../../../core/constants/colors.dart';
-import '../../../../core/constants/images.dart'; // for Get.width and Get.height
+import '../../../../../core/constants/colors.dart';
+import '../../../../../core/constants/images.dart'; // for Get.width and Get.height
 
 class SettingsProfileDownSection extends StatelessWidget {
   final String text;

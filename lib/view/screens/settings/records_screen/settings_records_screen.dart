@@ -1,12 +1,12 @@
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'controller/settings_records_controller.dart';
-import '../../../custom_widgets/settings/cards/settings_records_card.dart';
-import '../../../custom_widgets/settings/records_widgets.dart/select_all_checkbox.dart';
-import '../../../custom_widgets/settings/records_widgets.dart/textwith_icon.dart';
+import 'widgets/settings_records_card.dart';
+import 'widgets/select_all_checkbox.dart';
+import 'widgets/textwith_icon.dart';
 
 class SettingsRecordsScreen extends StatelessWidget {
   const SettingsRecordsScreen({super.key});

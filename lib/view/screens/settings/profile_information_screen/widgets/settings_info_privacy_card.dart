@@ -3,8 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/constants/colors.dart';
-import '../../../../core/constants/styles.dart';
+import '../../../../../core/constants/colors.dart';
+import '../../../../../core/constants/styles.dart';
 
 class SettingsInfoPrivacyCard extends StatelessWidget {
   final IconData icon;

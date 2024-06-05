@@ -1,11 +1,11 @@
 import 'package:articles/core/constants/styles.dart';
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'controller/settings_notifications_controller.dart';
-import '../../../custom_widgets/settings/cards/settings_custom_notifications_list.dart';
+import 'widgets/settings_custom_notifications_list.dart';
 
 class SettingsNotificationsScreen extends StatelessWidget {
   const SettingsNotificationsScreen({super.key});

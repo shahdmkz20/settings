@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../../../custom_widgets/settings/cards/settings_saved_cat.dart';
+import 'widgets/settings_saved_cat.dart';
 import '../../../custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import '../../../custom_widgets/settings/sections/settings_sections.dart';
-import '../../../custom_widgets/text/custom_medium_title.dart';
-import '../../../custom_widgets/text/custom_searchbar.dart';
-import '../../../custom_widgets/text/custom_text_with_more.dart';
+import '../../../custom_widgets/settings/sections/settings_custom_card_list.dart';
+import '../../../custom_widgets/settings/text/custom_medium_title.dart';
+import '../../../custom_widgets/settings/text/custom_searchbar.dart';
+import '../../../custom_widgets/settings/text/custom_text_with_more.dart';
 
 class SettingsSavedScreen extends StatelessWidget {
   const SettingsSavedScreen({super.key});

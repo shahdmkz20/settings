@@ -2,7 +2,7 @@ import 'package:articles/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../dropdown/settings_jobs_dropdown.dart';
+import '../../../../custom_widgets/settings/dropdown/settings_jobs_dropdown.dart';
 
 class AdvertismentUpperSection extends StatelessWidget {
   final List<String> dropDownListValues;

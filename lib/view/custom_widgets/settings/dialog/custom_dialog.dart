@@ -1,7 +1,7 @@
 import 'package:articles/core/constants/colors.dart';
 import 'package:articles/core/constants/styles.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
-import 'package:articles/view/custom_widgets/text/custom_text_with_more.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_text_with_more.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

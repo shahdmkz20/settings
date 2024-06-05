@@ -1,9 +1,9 @@
 import 'package:articles/core/constants/colors.dart';
 import 'package:articles/core/constants/styles.dart';
 
-import 'package:articles/view/custom_widgets/settings/sections/settings_sections.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
-import 'package:articles/view/custom_widgets/text/custom_text_with_more.dart';
+import 'package:articles/view/custom_widgets/settings/sections/settings_custom_card_list.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_text_with_more.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -11,8 +11,8 @@ import 'package:get/get.dart';
 import 'controller/settings_profile_settings_controller.dart';
 import '../../../../core/constants/shared_prefrences.dart';
 import '../../../../data/static/static.dart';
-import '../../../custom_widgets/settings/cards/settings_search_item_card.dart';
-import '../../../custom_widgets/settings/sections/settings_profile_down_section.dart';
+import 'widgets/settings_search_item_card.dart';
+import 'widgets/settings_profile_down_section.dart';
 
 class SettingsProfileSettingsScreen extends StatelessWidget {
   const SettingsProfileSettingsScreen({super.key});

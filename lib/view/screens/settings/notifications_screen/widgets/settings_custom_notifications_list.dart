@@ -2,9 +2,9 @@ import 'package:articles/model/settings/notification_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/constants/colors.dart';
-import '../../../../core/constants/styles.dart';
-import '../../../../core/functions/returnTimeDifference.dart';
+import '../../../../../core/constants/colors.dart';
+import '../../../../../core/constants/styles.dart';
+import '../../../../../core/functions/returnTimeDifference.dart';
 
 class CustomNotificationsCard extends StatelessWidget {
   final NotificationModel notificationModel;

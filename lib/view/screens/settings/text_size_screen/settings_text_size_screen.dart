@@ -1,7 +1,7 @@
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
 import 'package:articles/view/custom_widgets/settings/dropdown/settings_jobs_dropdown.dart';
 
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

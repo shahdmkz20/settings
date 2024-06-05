@@ -3,7 +3,7 @@ import 'package:articles/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constants/colors.dart';
+import '../../../../core/constants/colors.dart';
 
 class CustomTabBar extends StatelessWidget {
   final List<String> tabsNames;

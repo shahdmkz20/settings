@@ -3,8 +3,8 @@ import 'package:articles/model/settings/saved_cat_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/constants/colors.dart';
-import '../../../../core/constants/styles.dart';
+import '../../../../../core/constants/colors.dart';
+import '../../../../../core/constants/styles.dart';
 
 class SettingsSavedCat extends StatelessWidget {
   final SavedCat savedCat;

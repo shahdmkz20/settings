@@ -1,11 +1,12 @@
 import 'package:articles/core/functions/validator.dart';
-import 'package:articles/view/custom_widgets/custom_button.dart';
+import 'package:articles/view/custom_widgets/settings/buttons/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'controller/settings_forget_password_controller.dart';
 import '../../../custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import '../../../custom_widgets/text/custom_medium_title.dart';
+import '../../../custom_widgets/settings/text/custom_medium_title.dart';
+import 'controller/widgets/custom_forget_password_form_field.dart';
 
 class SettingsForgetPassword extends StatelessWidget {
   const SettingsForgetPassword({super.key});
@@ -28,60 +29,34 @@ class SettingsForgetPassword extends StatelessWidget {
                 SizedBox(
                   height: Get.height * 0.04,
                 ),
-                TextFormField(
-                  controller: controller.oldPasswordController,
-                  obscureText: controller.isOldPasswordVisible,
-                  decoration: InputDecoration(
+                CustomForgetPasswordFormField(
                     hintText: 'كلمة السر القديمة',
-                    hintStyle: const TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.w300),
-                    prefixIcon: InkWell(
-                      onTap: controller.showOldPass,
-                      child: controller.isOldPasswordVisible
-                          ? const Icon(Icons.visibility_off_outlined)
-                          : const Icon(Icons.visibility_outlined),
-                    ),
-                  ),
-                ),
+                    controller: controller.oldPasswordController,
+                    obscureText: controller.isOldPasswordVisible,
+                    onTap: controller.showOldPass,
+                    isVisible: controller.isOldPasswordVisible),
                 SizedBox(
                   height: Get.height * 0.04,
                 ),
-                TextFormField(
+                CustomForgetPasswordFormField(
+                  hintText: 'كلمة السر الجديدة',
                   validator: passwordValidator,
                   controller: controller.newPasswordController,
                   obscureText: controller.isNewPasswordVisible,
-                  decoration: InputDecoration(
-                    hintText: 'كلمة السر الجديدة',
-                    hintStyle: const TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.w300),
-                    prefixIcon: InkWell(
-                      onTap: controller.showPass,
-                      child: controller.isNewPasswordVisible
-                          ? const Icon(Icons.visibility_off_outlined)
-                          : const Icon(Icons.visibility_outlined),
-                    ),
-                  ),
+                  onTap: controller.showPass,
+                  isVisible: controller.isNewPasswordVisible,
                 ),
                 SizedBox(
                   height: Get.height * 0.02,
                 ),
-                TextFormField(
-                  validator: (val) => confirmPasswordValidator(
-                      val!, controller.newPasswordController.text),
-                  controller: controller.cofirmPasswordController,
-                  obscureText: controller.isConfirmPasswordVisible,
-                  decoration: InputDecoration(
+                CustomForgetPasswordFormField(
                     hintText: 'تأكيد كلمة السر',
-                    hintStyle: const TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.w300),
-                    prefixIcon: InkWell(
-                      onTap: controller.showCofirmPass,
-                      child: controller.isConfirmPasswordVisible
-                          ? const Icon(Icons.visibility_off_outlined)
-                          : const Icon(Icons.visibility_outlined),
-                    ),
-                  ),
-                ),
+                    validator: (val) => confirmPasswordValidator(
+                        val!, controller.newPasswordController.text),
+                    controller: controller.cofirmPasswordController,
+                    obscureText: controller.isConfirmPasswordVisible,
+                    onTap: controller.showCofirmPass,
+                    isVisible: controller.isConfirmPasswordVisible),
                 Spacer(),
                 CustomButton(
                     text: 'تأكيد',

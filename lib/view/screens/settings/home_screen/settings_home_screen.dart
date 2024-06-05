@@ -4,7 +4,7 @@ import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScree
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../custom_widgets/settings/sections/settings_profile_bio.dart';
-import '../../../custom_widgets/settings/sections/settings_sections.dart';
+import '../../../custom_widgets/settings/sections/settings_custom_card_list.dart';
 
 class SettingsHomePage extends StatelessWidget {
   const SettingsHomePage({super.key});

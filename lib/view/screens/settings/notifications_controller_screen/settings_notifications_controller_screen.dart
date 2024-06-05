@@ -1,10 +1,10 @@
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'controller/settings_notifications_controls_controller.dart';
 import '../../../custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import '../../../custom_widgets/settings/switchtile/custom_switch_tile.dart';
+import 'widgets/custom_switch_tile.dart';
 
 class SettingsNotificationsControlsScreen extends StatelessWidget {
   const SettingsNotificationsControlsScreen({super.key});

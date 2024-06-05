@@ -1,7 +1,7 @@
-import 'package:articles/view/custom_widgets/settings/cards/settings_info_privacy_card.dart';
+import 'package:articles/view/screens/settings/profile_information_screen/widgets/settings_info_privacy_card.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../data/static/static.dart';
+import '../../../../../data/static/static.dart';
 
 class SettingsProfileInfoList extends StatelessWidget {
   final List<String> list;

@@ -3,8 +3,8 @@ import 'package:articles/model/settings/training_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/constants/colors.dart';
-import 'settings_job_image_contanier.dart';
+import '../../../../../core/constants/colors.dart';
+import '../../../../custom_widgets/settings/cards/settings_job_image_contanier.dart';
 
 class SettingsAdvertismentCard extends StatelessWidget {
   final void Function()? onTap;

@@ -1,15 +1,15 @@
 import 'package:articles/data/static/static.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
 import 'settings_jobs_controller.dart';
-import '../../../custom_widgets/custom_button.dart';
-import '../../../custom_widgets/settings/cards/settings_job_details_card.dart';
+import '../../../custom_widgets/settings/buttons/custom_button.dart';
+import 'widgets/settings_job_details_card.dart';
 import '../../../custom_widgets/settings/cards/settings_job_image_contanier.dart';
 import '../../../custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import '../../../custom_widgets/settings/sections/settings_job_description.dart';
+import '../../../custom_widgets/settings/sections/settings_description_container.dart';
 
 class JobInformation extends StatelessWidget {
   const JobInformation({super.key});

@@ -1,10 +1,10 @@
 import 'package:articles/view/screens/settings/advertisment/controller/settings_advertisment_controller.dart';
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../custom_widgets/settings/cards/settings_advertisment_card.dart';
-import '../../../custom_widgets/settings/sections/settings_advertisment_upper_section.dart';
+import 'widgets/settings_advertisment_card.dart';
+import 'widgets/settings_advertisment_upper_section.dart';
 
 class SettingsAdvertismentScreen extends StatelessWidget {
   const SettingsAdvertismentScreen({super.key});

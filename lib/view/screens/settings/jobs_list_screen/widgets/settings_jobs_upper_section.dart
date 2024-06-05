@@ -2,8 +2,8 @@ import 'package:articles/view/screens/settings/home_screen/controller/settings_c
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../data/static/static.dart';
-import '../dropdown/settings_jobs_dropdown.dart';
+import '../../../../../data/static/static.dart';
+import '../../../../custom_widgets/settings/dropdown/settings_jobs_dropdown.dart';
 
 class SettingsJobsUpperSection extends StatelessWidget {
   const SettingsJobsUpperSection({super.key});

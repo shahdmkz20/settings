@@ -1,8 +1,8 @@
-import 'package:articles/controller/settings/settings_training_controller.dart';
-import 'package:articles/view/custom_widgets/custom_button.dart';
+import 'package:articles/view/screens/settings/training_screen/controller/settings_training_controller.dart';
+import 'package:articles/view/custom_widgets/settings/buttons/custom_button.dart';
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import 'package:articles/view/custom_widgets/settings/sections/settings_job_description.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/sections/settings_description_container.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

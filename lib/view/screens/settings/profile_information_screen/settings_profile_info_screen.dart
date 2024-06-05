@@ -1,10 +1,10 @@
 import 'package:articles/view/screens/settings/profile_information_screen/controller/settings_profile_info_controller.dart';
 import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import 'package:articles/view/custom_widgets/text/custom_medium_title.dart';
+import 'package:articles/view/custom_widgets/settings/text/custom_medium_title.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../custom_widgets/settings/sections/settings_profile_bio.dart';
-import '../../../custom_widgets/settings/sections/settings_profile_info_list.dart';
+import 'widgets/settings_profile_info_list.dart';
 
 class SettingsProfileInfoScreen extends StatelessWidget {
   const SettingsProfileInfoScreen({super.key});

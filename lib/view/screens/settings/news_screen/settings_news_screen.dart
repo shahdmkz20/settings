@@ -3,9 +3,9 @@ import 'package:articles/data/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../custom_widgets/settings/cards/settings_job_card.dart';
+import '../../../custom_widgets/settings/cards/settings_job_news_card.dart';
 import '../../../custom_widgets/settings/defaultscreen/defaultScreens.dart';
-import '../../../custom_widgets/tabbars/customtabbar.dart';
+import '../../../custom_widgets/settings/tabbars/customtabbar.dart';
 
 class SettingsNewsScreen extends StatelessWidget {
   const SettingsNewsScreen({super.key});

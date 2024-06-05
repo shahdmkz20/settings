@@ -2,9 +2,9 @@ import 'package:articles/model/settings/record_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../screens/settings/records_screen/controller/settings_records_controller.dart';
-import '../../../../core/constants/colors.dart';
-import '../../../../core/constants/styles.dart';
+import '../controller/settings_records_controller.dart';
+import '../../../../../core/constants/colors.dart';
+import '../../../../../core/constants/styles.dart';
 
 class SettingsRecordsCard extends StatelessWidget {
   final RecordModel recordModel;
