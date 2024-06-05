@@ -13,9 +13,8 @@ class SettingsAdvertismentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SettingsAdvertismentController controller =
         Get.put(SettingsAdvertismentController());
-    return Defaultscreens(onTap: () {
-      Get.back();
-    }, child: GetBuilder<SettingsAdvertismentController>(builder: (context) {
+    return Defaultscreens(
+        child: GetBuilder<SettingsAdvertismentController>(builder: (context) {
       return SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

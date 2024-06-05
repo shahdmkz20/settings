@@ -1,7 +1,7 @@
 import 'package:articles/controller/settings/settings_saved_controller.dart';
 import 'package:articles/data/static/static.dart';
 import 'package:articles/model/settings/userlist_model.dart';
-import 'package:articles/view/custom_widgets/settings/dialog/custom_dialog.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -21,9 +21,6 @@ class SettingsSavedScreen extends StatelessWidget {
     // ignore: unused_local_variable
     SettingsSavedController controller = Get.put(SettingsSavedController());
     return Defaultscreens(
-      onTap: () {
-        Get.back();
-      },
       child: GetBuilder<SettingsSavedController>(builder: (controller) {
         return SingleChildScrollView(
           child: Column(
@@ -44,21 +41,7 @@ class SettingsSavedScreen extends StatelessWidget {
               SizedBox(height: Get.height * 0.03),
               CustomTextWithMore(
                 onTap: () {
-                  showDialog(
-                      context: (context),
-                      builder: (context) {
-                        return CustomDialog(
-                          firstBtnTap: () {
-                            controller.addItem(controller.itemName.text);
-                            Get.back();
-                          },
-                          controller: controller.itemName,
-                          title: 'انشئ قائمتك',
-                          content: '',
-                          favourites: true,
-                          firstBtnTxt: 'انشئ',
-                        );
-                      });
+                  controller.showDialogg();
                 },
                 title: 'قوائمك',
                 more: true,

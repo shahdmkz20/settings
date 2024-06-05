@@ -1,3 +1,4 @@
+import 'package:articles/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -6,12 +7,18 @@ import '../../../../controller/settings/settings_controller.dart';
 class SettingsAppbar extends StatelessWidget {
   final bool haveImage;
   final bool haveSearch;
+  final bool notiIcon;
+
   final void Function()? onTap;
+
+  final TextEditingController? searchController;
   const SettingsAppbar({
     super.key,
     this.haveImage = false,
     required this.onTap,
     this.haveSearch = false,
+    this.notiIcon = false,
+    this.searchController,
   });
 
   @override
@@ -33,21 +40,28 @@ class SettingsAppbar extends StatelessWidget {
             ),
           const Spacer(),
           if (haveSearch)
-            InkWell(
-              onTap: onTap,
-              child: Container(
-                margin: const EdgeInsets.only(left: 3),
-                child: Icon(
-                  size: Get.width * 0.07,
-                  Icons.search,
-                ),
-              ),
+            Row(
+              children: [
+                InkWell(
+                  onTap: onTap,
+                  child: Container(
+                    margin: const EdgeInsets.only(left: 3),
+                    child: Icon(
+                      size: Get.width * 0.07,
+                      Icons.search,
+                    ),
+                  ),
+                )
+              ],
             ),
           InkWell(
             onTap: onTap,
             child: Icon(
-              Icons.arrow_forward,
+              notiIcon
+                  ? Icons.notifications_active_outlined
+                  : Icons.arrow_forward,
               size: Get.width * 0.08,
+              color: notiIcon ? AppColors.accent : Colors.black,
             ),
           ),
         ],

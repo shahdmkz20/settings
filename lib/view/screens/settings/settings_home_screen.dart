@@ -13,9 +13,6 @@ class SettingsHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     SettingsController controller = SettingsController();
     return Defaultscreens(
-      onTap: () {
-        Get.back();
-      },
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

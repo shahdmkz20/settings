@@ -17,9 +17,7 @@ class SettingsTextSizeScreen extends StatelessWidget {
     // ignore: unused_local_variable
     SettingsTextSizeController controller =
         Get.put(SettingsTextSizeController());
-    return Defaultscreens(onTap: () {
-      Get.back();
-    }, child: SingleChildScrollView(
+    return Defaultscreens(child: SingleChildScrollView(
       child: GetBuilder<SettingsTextSizeController>(builder: (controller) {
         return Column(
           children: [

@@ -15,9 +15,6 @@ class SettingsProfileInfoScreen extends StatelessWidget {
         Get.put(SettingsProfileInfoController());
 
     return Defaultscreens(
-      onTap: () {
-        Get.back();
-      },
       child: SingleChildScrollView(
         child: Column(
           children: [

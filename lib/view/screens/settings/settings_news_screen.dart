@@ -14,9 +14,6 @@ class SettingsNewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SettingsNewsController controller = Get.put(SettingsNewsController());
     return Defaultscreens(
-      onTap: () {
-        Get.back();
-      },
       child: SingleChildScrollView(
         physics: NeverScrollableScrollPhysics(),
         child: Column(

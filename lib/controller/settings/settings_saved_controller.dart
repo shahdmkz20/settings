@@ -4,6 +4,8 @@ import 'package:articles/model/settings/userlist_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../view/custom_widgets/settings/dialog/custom_dialog.dart';
+
 abstract class SettingsSavedControllerABS extends GetxController {
   late TextEditingController searchController;
   late List<UserlistModel> usersList;
@@ -11,6 +13,7 @@ abstract class SettingsSavedControllerABS extends GetxController {
   addItem(String itemName);
   searchForItem();
   goToScreen(int index);
+  showDialogg();
 }
 
 class SettingsSavedController extends SettingsSavedControllerABS {
@@ -45,5 +48,24 @@ class SettingsSavedController extends SettingsSavedControllerABS {
     final newUser = UserlistModel(listId: newId, name: itemName);
     userList.add(newUser);
     update();
+  }
+
+  @override
+  showDialogg() {
+    showDialog(
+        context: Get.context!,
+        builder: (context) {
+          return CustomDialog(
+            firstBtnTap: () {
+              addItem(itemName.text);
+              Get.back();
+            },
+            controller: itemName,
+            title: 'انشئ قائمتك',
+            content: '',
+            favourites: true,
+            firstBtnTxt: 'انشئ',
+          );
+        });
   }
 }

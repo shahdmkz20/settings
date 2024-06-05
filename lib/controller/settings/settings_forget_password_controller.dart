@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../view/custom_widgets/settings/dialog/custom_dialog.dart';
+
 abstract class SettingsForgetPasswordControllerABS extends GetxController {
   checkPassword();
   showOldPass();
   showPass();
   showCofirmPass();
+  changePassword();
+  GlobalKey<FormState> formStateKey = GlobalKey<FormState>();
   late TextEditingController oldPasswordController;
   late TextEditingController cofirmPasswordController;
   late TextEditingController newPasswordController;
@@ -53,5 +57,23 @@ class SettingsForgetPasswordController
   showOldPass() {
     isOldPasswordVisible = !isOldPasswordVisible;
     update();
+  }
+
+  @override
+  changePassword() {
+    var formData = formStateKey.currentState;
+    if (formData!.validate()) {
+      print('password changed succefully');
+      showDialog(
+          context: Get.context!,
+          builder: (context) {
+            return CustomDialog(
+              justText: true,
+              text: 'تم تغيير كلمة السر بنجاح',
+            );
+          });
+    } else {
+      print('not working');
+    }
   }
 }

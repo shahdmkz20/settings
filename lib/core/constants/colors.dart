@@ -11,4 +11,5 @@ class AppColors {
   static const Color colorIcon = Color(0xff424242);
   static const Color textGreyColor = Color(0xff828282);
   static const Color primaryCardColor = Color(0xFFFFFFFF);
+  static const Color secondaryCardColor = Color(0xFFABABAB);
 }

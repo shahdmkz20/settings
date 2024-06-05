@@ -9,6 +9,7 @@ abstract class SettingsControllerABS extends GetxController {
   late List<dynamic> settingsSection;
   late Person personModel;
   late List<String> listType = [];
+
   goToPage(int index);
   goToJob(JobModel job);
 }

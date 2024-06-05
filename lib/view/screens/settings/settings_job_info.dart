@@ -18,9 +18,6 @@ class JobInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     SettingsJobsController controller = Get.put(SettingsJobsController());
     return Defaultscreens(
-      onTap: () {
-        Get.back();
-      },
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

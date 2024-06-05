@@ -14,9 +14,6 @@ class SettingsNotificationsControlsScreen extends StatelessWidget {
     SettingsNotificationsControlsController controller =
         Get.put(SettingsNotificationsControlsController());
     return Defaultscreens(
-      onTap: () {
-        Get.back();
-      },
       child: GetBuilder<SettingsNotificationsControlsController>(
           builder: (context) {
         return Column(

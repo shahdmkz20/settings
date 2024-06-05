@@ -13,9 +13,6 @@ class SettingsJobsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(SettingsController());
     return Defaultscreens(
-      onTap: () {
-        Get.back();
-      },
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: SingleChildScrollView(

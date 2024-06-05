@@ -16,36 +16,33 @@ class SettingsRecordsScreen extends StatelessWidget {
     // ignore: unused_local_variable
     SettingsRecordsController controller = Get.put(SettingsRecordsController());
     return Defaultscreens(
-        onTap: () {
-          Get.back();
-        },
         child: SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(),
-          child: GetBuilder<SettingsRecordsController>(builder: (controller) {
-            return Column(
-              children: [
-                const CustomMediumTitle(
-                  text: "السجلات",
-                ),
-                SizedBox(
-                  height: Get.height * 0.03,
-                ),
-                const RecordsUpperOptions(),
-                SizedBox(
-                  height: Get.height * 0.03,
-                ),
-                const SelectAllCheckbox(),
-                SizedBox(
-                  height: Get.height * 0.03,
-                ),
-                SizedBox(height: Get.height * 0.35, child: const RecordsList()),
-                const CustomMediumTitle(
-                  text: "20-5-2024",
-                ),
-                SizedBox(height: Get.height * 0.2, child: const RecordsList()),
-              ],
-            );
-          }),
-        ));
+      physics: const NeverScrollableScrollPhysics(),
+      child: GetBuilder<SettingsRecordsController>(builder: (controller) {
+        return Column(
+          children: [
+            const CustomMediumTitle(
+              text: "السجلات",
+            ),
+            SizedBox(
+              height: Get.height * 0.03,
+            ),
+            const RecordsUpperOptions(),
+            SizedBox(
+              height: Get.height * 0.03,
+            ),
+            const SelectAllCheckbox(),
+            SizedBox(
+              height: Get.height * 0.03,
+            ),
+            SizedBox(height: Get.height * 0.35, child: const RecordsList()),
+            const CustomMediumTitle(
+              text: "20-5-2024",
+            ),
+            SizedBox(height: Get.height * 0.2, child: const RecordsList()),
+          ],
+        );
+      }),
+    ));
   }
 }
