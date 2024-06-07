@@ -47,7 +47,7 @@ class ChangeController extends GetxController {
       String password = passwordController.text;
       String confirmPassword = conPasswordController.text;
       Get.find<MyServices>()
-          .sharedPrefeerence
+          .sharedPreferences
           .setString("Password", passwordController.text);
       Get.offAllNamed(AppRoutes.login);
       Get.delete<ChangeController>();

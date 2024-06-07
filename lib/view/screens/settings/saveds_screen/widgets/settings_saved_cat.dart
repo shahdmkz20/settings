@@ -1,16 +1,20 @@
 import 'package:articles/view/screens/settings/saveds_screen/controller/settings_saved_controller.dart';
-import 'package:articles/model/settings/saved_cat_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/styles.dart';
 
-class SettingsSavedCat extends StatelessWidget {
-  final SavedCat savedCat;
+class CustomColordContainer extends StatelessWidget {
+  final dynamic modelItem;
+  final bool isUserItemsList;
   final void Function()? onTap;
-  const SettingsSavedCat(
-      {super.key, required this.savedCat, required this.onTap});
+  const CustomColordContainer(
+      {super.key,
+      required this.onTap,
+      this.isUserItemsList = false,
+      this.modelItem});
 
   @override
   Widget build(BuildContext context) {
@@ -23,46 +27,68 @@ class SettingsSavedCat extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: savedCat.color.withOpacity(0.4),
+                color: modelItem!.color.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(15),
-                border: Border.all(color: savedCat.color),
+                border: Border.all(color: modelItem!.color),
               ),
-              child: Icon(
-                size: Get.width * 0.09,
-                savedCat.icon,
-                color: AppColors.primaryCardColor,
-              ),
+              child: isUserItemsList
+                  ? Container(
+                      width: Get.width * 0.12,
+                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      child: Text(
+                        textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                        modelItem!.title,
+                        style: whiteDisplayMedium32.copyWith(
+                            fontSize: 13, fontWeight: FontWeight.w700),
+                      ),
+                    )
+                  : Icon(
+                      size: Get.width * 0.09,
+                      modelItem!.icon,
+                      color: AppColors.primaryCardColor,
+                    ),
             ),
           ),
-          SizedBox(
-            height: Get.height * 0.01,
-          ),
-          Text(savedCat.title, style: bodyMedium16),
+          isUserItemsList
+              ? Container()
+              : Text(modelItem.title, style: bodyMedium16),
         ],
       ),
     );
   }
 }
 
-class SettingsSavedCatListView extends StatelessWidget {
-  final List<SavedCat> savedCategories;
-  const SettingsSavedCatListView({super.key, required this.savedCategories});
+class CustomColoredContainerListView extends StatelessWidget {
+  final List<dynamic> itemsList;
+  final bool isUserModel;
+  final void Function(int)? onTap;
+  const CustomColoredContainerListView({
+    super.key,
+    required this.itemsList,
+    this.isUserModel = false,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     SettingsSavedController controller = Get.put(SettingsSavedController());
     return SizedBox(
       height: Get.height * 0.17,
       width: Get.width,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: savedCategories.length,
+          itemCount: itemsList.length,
           itemBuilder: (context, index) {
-            return SettingsSavedCat(
+            return CustomColordContainer(
               onTap: () {
-                controller.goToScreen(index);
+                if (onTap != null) {
+                  onTap!(index); // Pass the index to the onTap callback
+                }
               },
-              savedCat: savedCategories[index],
+              modelItem: itemsList[index],
+              isUserItemsList: isUserModel,
             );
           }),
     );

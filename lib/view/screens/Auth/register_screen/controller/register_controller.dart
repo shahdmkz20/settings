@@ -1,12 +1,13 @@
 // ignore_for_file: unused_local_variable, invalid_use_of_protected_member
 import 'package:articles/core/constants/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:form_field_validator/form_field_validator.dart';
+
 import 'package:get/get.dart';
 
 import '../../../../../core/services/services.dart';
 
 class RegisterController extends GetxController {
+  MyServices myServices = Get.find();
   late TextEditingController nameController;
   late TextEditingController emailController;
   late TextEditingController passwordController;
@@ -26,26 +27,6 @@ class RegisterController extends GetxController {
     _isConfirmPasswordVisible.value = !_isConfirmPasswordVisible.value;
   }
 
-  final nameValidator = MultiValidator([
-    RequiredValidator(errorText: 'Name is required'),
-    MinLengthValidator(8, errorText: 'Name must be at least 8 digits long'),
-    PatternValidator(r'(?=.*?[#?!@$%^&*-])',
-        errorText: 'Name must have at least one special character')
-  ]);
-
-  final emailValidator = MultiValidator([
-    RequiredValidator(errorText: 'Email is required'),
-    PatternValidator(r'(@)', errorText: 'Email must have "@" character'),
-    PatternValidator('.com', errorText: 'Email must have ".com"'),
-  ]);
-
-  final passwordValidator = MultiValidator([
-    RequiredValidator(errorText: 'Password is required'),
-    MinLengthValidator(8, errorText: 'password must be at least 8 digits long'),
-    PatternValidator(r'(?=.*?[#?!@$%^&*-])',
-        errorText: 'passwords must have at least one special character')
-  ]);
-
   String? conPasswordValidator(String? value) {
     if (value == null || value.isEmpty) {
       return 'Confirm your Password';
@@ -62,7 +43,9 @@ class RegisterController extends GetxController {
       String email = emailController.text;
       String password = passwordController.text;
       String confirmPassword = conPasswordController.text;
+      //  myServices.sharedPreferences.setString("step", "1");
       setPrivData();
+
       //Get.offAllNamed(AppRoute.home);
       Get.delete<RegisterController>();
     }
@@ -102,13 +85,13 @@ class RegisterController extends GetxController {
 
   void setPrivData() {
     Get.find<MyServices>()
-        .sharedPrefeerence
+        .sharedPreferences
         .setString("UserName", nameController.text);
     Get.find<MyServices>()
-        .sharedPrefeerence
+        .sharedPreferences
         .setString("Email", emailController.text);
     Get.find<MyServices>()
-        .sharedPrefeerence
+        .sharedPreferences
         .setString("Password", passwordController.text);
   }
 }

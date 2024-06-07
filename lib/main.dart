@@ -1,8 +1,6 @@
-import 'package:articles/core/constants/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'core/localizations/translation.dart';
 import 'core/services/services.dart';
 import 'routes.dart';
 
@@ -17,10 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      translations: MyTranslation(),
+      textDirection: TextDirection.rtl,
       debugShowCheckedModeBanner: false,
       getPages: routes,
-      initialRoute: AppRoutes.splash,
     );
   }
 }

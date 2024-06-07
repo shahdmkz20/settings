@@ -49,6 +49,7 @@ class SettingsAppbar extends StatelessWidget {
                     child: Icon(
                       size: Get.width * 0.07,
                       Icons.search,
+                      color: AppColors.textGreyColor,
                     ),
                   ),
                 )

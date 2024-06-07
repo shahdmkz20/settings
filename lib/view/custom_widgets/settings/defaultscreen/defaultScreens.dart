@@ -1,4 +1,5 @@
 import 'package:articles/view/custom_widgets/settings/appbar/settings_appbar.dart';
+import 'package:articles/view/custom_widgets/settings/navbar/custom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -47,7 +48,9 @@ class Defaultscreens extends StatelessWidget {
             margin: EdgeInsets.symmetric(
                 horizontal: horizntalMargin > 0 ? horizntalMargin : 24,
                 vertical: verticalMargin > 0 ? verticalMargin : 12),
-            child: child,
+            child: CustomNavBar(
+              wholeScreen: child,
+            ),
           ),
         ),
       ),

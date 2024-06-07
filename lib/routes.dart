@@ -1,5 +1,7 @@
+import 'package:articles/view/screens/news/news_home_screen/news_home_screen.dart';
 import 'package:articles/view/screens/settings/advertisment/settings_advertisment_screen.dart';
 import 'package:articles/view/screens/settings/forget_password_screen/settings_forget_password_screen.dart';
+import 'package:articles/view/screens/settings/home_screen/settings_home_screen.dart';
 
 import 'package:articles/view/screens/settings/job_information_screen/settings_job_info.dart';
 import 'package:articles/view/screens/settings/jobs_list_screen/settings_jobs_screen.dart';
@@ -15,19 +17,20 @@ import 'package:articles/view/screens/settings/training_screen/settings_training
 import 'package:get/get.dart';
 
 import 'core/constants/routes.dart';
+import 'core/middleware/middleware.dart';
 import 'view/screens/Auth/change_screen/changescreen.dart';
 import 'view/screens/Auth/interst_screen/interstscreen.dart';
 import 'view/screens/Auth/login_screen/loginscreen.dart';
 import 'view/screens/Auth/register_screen/registerscreen.dart';
 import 'view/screens/Auth/splash_screen/splashscreen.dart';
 import 'view/screens/Auth/verify_screen/verifyscreen.dart';
+import 'view/screens/home/home_screen.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
       name: "/",
-      page: () =>
-          const SplashScreen() //JobInformation() //, //middlewares: [MyMiddleWare()]
-      ),
+      page: () => const SplashScreen(),
+      middlewares: [MyMiddleWare()]),
 
 //Auth
   GetPage(name: AppRoutes.splash, page: () => const SplashScreen()),
@@ -36,15 +39,19 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoutes.change, page: () => const ChangeScreen()),
   GetPage(name: AppRoutes.verify, page: () => const VerifyScreen()),
 
+//new
+  GetPage(name: AppRoutes.news, page: () => const NewsHomeScreen()),
+
 //intersets
   GetPage(name: AppRoutes.interst, page: () => const InterstsScreen()),
 
   //settings
+  GetPage(name: AppRoutes.settings, page: () => const SettingsHomePage()),
   GetPage(name: AppRoutes.settingsJobs, page: () => const SettingsJobsScreen()),
   GetPage(name: AppRoutes.jobInfo, page: () => const JobInformation()),
   GetPage(name: AppRoutes.saved, page: () => const SettingsSavedScreen()),
   GetPage(name: AppRoutes.hobbies, page: () => const SettingsNewsScreen()),
-  GetPage(name: AppRoutes.news, page: () => const SettingsNewsScreen()),
+  GetPage(name: AppRoutes.settingsNews, page: () => const SettingsNewsScreen()),
   GetPage(name: AppRoutes.records, page: () => const SettingsRecordsScreen()),
   GetPage(
       name: AppRoutes.advertisment,
@@ -66,4 +73,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoutes.notifications,
       page: () => const SettingsNotificationsScreen()),
+
+  //Home
+  GetPage(name: AppRoutes.home, page: () => const HomeScreen()),
 ];

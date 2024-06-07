@@ -13,23 +13,21 @@ class SettingsHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     SettingsController controller = SettingsController();
     return Defaultscreens(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SettingsProfileBio(
-              person: controller.personModel,
-            ),
-            SizedBox(
-              height: Get.height * 0.1,
-            ),
-            CustomCardList(
-                list: controller.settingsSection,
-                onTap: (index) {
-                  controller.goToPage(index);
-                })
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SettingsProfileBio(
+            person: controller.personModel,
+          ),
+          SizedBox(
+            height: Get.height * 0.1,
+          ),
+          CustomCardList(
+              list: controller.settingsSection,
+              onTap: (index) {
+                controller.goToPage(index);
+              })
+        ],
       ),
     );
   }

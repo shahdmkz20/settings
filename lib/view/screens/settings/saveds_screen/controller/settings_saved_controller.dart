@@ -18,7 +18,7 @@ abstract class SettingsSavedControllerABS extends GetxController {
 
 class SettingsSavedController extends SettingsSavedControllerABS {
   @override
-  List<UserlistModel> get usersList => super.usersList = userList;
+  List<UserlistModel> get usersList => super.usersList = userMenuList;
   @override
   searchForItem() {}
 
@@ -26,7 +26,7 @@ class SettingsSavedController extends SettingsSavedControllerABS {
   goToScreen(int index) {
     switch (index) {
       case 0:
-        Get.toNamed(AppRoutes.news);
+        Get.toNamed(AppRoutes.settingsNews);
     }
   }
 
@@ -44,9 +44,9 @@ class SettingsSavedController extends SettingsSavedControllerABS {
 
   @override
   addItem(String itemName) {
-    final int newId = userList.length + 1;
-    final newUser = UserlistModel(listId: newId, name: itemName);
-    userList.add(newUser);
+    final int newId = userMenuList.length + 1;
+    final newUser = UserlistModel(listId: newId, title: itemName);
+    userMenuList.add(newUser);
     update();
   }
 

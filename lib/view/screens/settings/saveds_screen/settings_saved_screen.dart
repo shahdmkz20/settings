@@ -35,8 +35,8 @@ class SettingsSavedScreen extends StatelessWidget {
                 text: 'المحفوظات',
               ),
               SizedBox(height: Get.height * 0.03),
-              SettingsSavedCatListView(
-                savedCategories: savedCategories,
+              CustomColoredContainerListView(
+                itemsList: savedCategories,
               ),
               SizedBox(height: Get.height * 0.03),
               CustomTextWithMore(
@@ -48,7 +48,7 @@ class SettingsSavedScreen extends StatelessWidget {
               ),
               SizedBox(height: Get.height * 0.03),
               CustomCardList(
-                list: userList,
+                list: userMenuList,
               )
             ],
           ),

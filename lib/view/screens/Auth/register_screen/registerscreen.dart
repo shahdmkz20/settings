@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/constants/styles.dart';
+import '../../../../core/functions/validator.dart';
 import '../widget/custom_elevated_button.dart';
 import '../widget/custom_social_icons.dart';
 import '../widget/custom_text_field.dart';
@@ -46,7 +47,7 @@ class RegisterScreen extends StatelessWidget {
               Icons.account_circle_outlined,
             ),
             controller: _controller.nameController,
-            validator: _controller.nameValidator,
+            validator: nameValidator,
           ),
           SizedBox(height: Get.height * 0.02),
           CustomTextField(
@@ -55,7 +56,7 @@ class RegisterScreen extends StatelessWidget {
             ),
             hintText: ' أدخل بريدك الالكتروني',
             controller: _controller.emailController,
-            validator: _controller.emailValidator,
+            validator: emailValidator,
           ),
           SizedBox(height: Get.height * 0.02),
           Obx(
@@ -72,7 +73,7 @@ class RegisterScreen extends StatelessWidget {
               ),
               hintText: ' كلمة السر ',
               controller: _controller.passwordController,
-              validator: _controller.passwordValidator,
+              validator: passwordValidator,
               obscureText: !_controller.isPasswordVisible,
             ),
           ),
