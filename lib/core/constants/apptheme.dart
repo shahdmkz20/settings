@@ -23,13 +23,13 @@ ThemeData EnglishTheme = ThemeData(
 );
 */
 ThemeData ArabicTheme = ThemeData(
-    appBarTheme: AppBarTheme(backgroundColor: AppColors.primaryBackGroundColor),
-    scaffoldBackgroundColor: AppColors.primaryBackGroundColor,
-    fontFamily: "tajwal",
-    useMaterial3: true,
-    textTheme: const TextTheme(
-        //عنوان رئيسي
-        /*   titleLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+  appBarTheme: AppBarTheme(backgroundColor: AppColors.primaryBackGroundColor),
+  scaffoldBackgroundColor: AppColors.primaryBackGroundColor,
+  fontFamily: "tajwal",
+  useMaterial3: true,
+  /* textTheme: const TextTheme(
+      //عنوان رئيسي
+      titleLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
       // عنوان فقرة او قسم
       titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       //عناوين فرعية
@@ -41,5 +41,5 @@ ThemeData ArabicTheme = ThemeData(
       bodyLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w300),
       //فقرات ضمن الكاردات
       bodyMedium: TextStyle(fontSize: 16),
-      bodySmall: TextStyle(fontSize: 16, fontWeight: FontWeight.w300)),*/
-        ));
+      bodySmall: TextStyle(fontSize: 16, fontWeight: FontWeight.w300)*/
+);

@@ -1,4 +1,5 @@
 import 'package:articles/data/static/static.dart';
+
 import 'package:get/get.dart';
 
 abstract class SettingsTextSizeControllerABS extends GetxController {
@@ -7,7 +8,6 @@ abstract class SettingsTextSizeControllerABS extends GetxController {
   late List<bool> selectedValues;
   late List<String> slectedVals;
   late List<String> titles;
-  onChanged(val, int index);
 }
 
 class SettingsTextSizeController extends SettingsTextSizeControllerABS {
@@ -26,7 +26,6 @@ class SettingsTextSizeController extends SettingsTextSizeControllerABS {
 
   String firstSelectedVal = "";
 
-  @override
   onChanged(val, index) {
     switch (index) {
       case 0:

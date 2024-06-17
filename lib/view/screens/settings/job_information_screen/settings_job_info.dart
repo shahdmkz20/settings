@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import 'settings_jobs_controller.dart';
+import 'controller/settings_jobs_controller.dart';
 import '../../../custom_widgets/settings/buttons/custom_button.dart';
 import 'widgets/settings_job_details_card.dart';
 import '../../../custom_widgets/settings/cards/settings_job_image_contanier.dart';

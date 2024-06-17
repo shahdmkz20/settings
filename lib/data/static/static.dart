@@ -1,6 +1,6 @@
 import 'package:articles/core/constants/colors.dart';
 import 'package:articles/model/settings/jobs_description_model.dart';
-import 'package:articles/model/settings/settings_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:fluttericon/brandico_icons.dart';
 import 'package:fluttericon/elusive_icons.dart';
@@ -11,15 +11,16 @@ import '../../model/settings/settings_sections.dart';
 
 //settings sections data
 List<dynamic> settingsSections = [
-  SettingsSectionsModel(id: 1, name: "الوظائف", icon: Icons.work_outline),
-  SettingsSectionsModel(id: 2, name: "المحفوظات", icon: Icons.bookmark_outline),
+  SettingsSectionsModel(id: 1, title: "الوظائف", icon: Icons.work_outline),
   SettingsSectionsModel(
-      id: 3, name: "الاهتمامات", icon: Icons.favorite_outline),
-  SettingsSectionsModel(id: 4, name: "السجلات", icon: Icons.history_outlined),
+      id: 2, title: "المحفوظات", icon: Icons.bookmark_outline),
   SettingsSectionsModel(
-      id: 5, name: "البوابة الاعلانية", icon: Icons.campaign_outlined),
+      id: 3, title: "الاهتمامات", icon: Icons.favorite_outline),
+  SettingsSectionsModel(id: 4, title: "السجلات", icon: Icons.history_outlined),
   SettingsSectionsModel(
-      id: 1, name: "الاعدادات", icon: Icons.settings_outlined),
+      id: 5, title: "البوابة الاعلانية", icon: Icons.campaign_outlined),
+  SettingsSectionsModel(
+      id: 1, title: "الاعدادات", icon: Icons.settings_outlined),
 ];
 
 List<String> jobsType = [
@@ -87,20 +88,22 @@ List<String> advList = [
 ];
 
 List<dynamic> settingsGeneralList = [
-  SettingsModel(
-      listId: 1,
-      name: 'الحساب والملف الشخصي',
+  SettingsSectionsModel(
+      id: 1,
+      title: 'الحساب والملف الشخصي',
       icon: Icons.account_circle_outlined),
-  SettingsModel(listId: 2, name: 'تغيير كلمة السر', icon: Icons.lock_outline),
-  SettingsModel(
-      listId: 3,
-      name: 'ادارة الاشعارات',
+  SettingsSectionsModel(
+      id: 2, title: 'تغيير كلمة السر', icon: Icons.lock_outline),
+  SettingsSectionsModel(
+      id: 3,
+      title: 'ادارة الاشعارات',
       icon: Icons.notification_important_outlined),
 ];
 
 List<dynamic> settingsAppList = [
-  SettingsModel(listId: 1, name: 'حجم الخط', icon: Elusive.text_height),
-  SettingsModel(listId: 2, name: "حول", icon: FontAwesome5.exclamation_circle),
+  SettingsSectionsModel(id: 1, title: 'حجم الخط', icon: Elusive.text_height),
+  SettingsSectionsModel(
+      id: 2, title: "حول", icon: FontAwesome5.exclamation_circle),
 ];
 
 List<IconData> profileSettingsIcons = [

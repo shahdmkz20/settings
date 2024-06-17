@@ -13,7 +13,7 @@ class CustomDialogTextformfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(2), color: AppColors.colorIcon),
       width: Get.width,

@@ -84,7 +84,7 @@ class CustomColoredContainerListView extends StatelessWidget {
             return CustomColordContainer(
               onTap: () {
                 if (onTap != null) {
-                  onTap!(index); // Pass the index to the onTap callback
+                  onTap!(index);
                 }
               },
               modelItem: itemsList[index],

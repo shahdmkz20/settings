@@ -1,16 +1,16 @@
-import 'package:articles/view/screens/settings/home_screen/controller/settings_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../../data/static/static.dart';
 import '../../../../custom_widgets/settings/dropdown/settings_jobs_dropdown.dart';
+import '../controller/settings_jobs_list_controller.dart';
 
 class SettingsJobsUpperSection extends StatelessWidget {
   const SettingsJobsUpperSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(SettingsController());
+    Get.put(SettingsJobsListController());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -18,7 +18,7 @@ class SettingsJobsUpperSection extends StatelessWidget {
           "اكتشف وظيفتك المناسبة!",
           style: Theme.of(context).textTheme.titleMedium,
         ),
-        GetBuilder<SettingsController>(builder: (controller) {
+        GetBuilder<SettingsJobsListController>(builder: (controller) {
           return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Container(

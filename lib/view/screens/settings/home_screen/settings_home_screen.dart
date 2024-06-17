@@ -22,11 +22,15 @@ class SettingsHomePage extends StatelessWidget {
           SizedBox(
             height: Get.height * 0.1,
           ),
-          CustomCardList(
-              list: controller.settingsSection,
-              onTap: (index) {
-                controller.goToPage(index);
-              })
+          Expanded(
+            child: ListView(children: [
+              CustomCardList(
+                  list: controller.settingsSection,
+                  onTap: (index) {
+                    controller.goToPage(index);
+                  }),
+            ]),
+          )
         ],
       ),
     );

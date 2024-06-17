@@ -47,9 +47,15 @@ class DescriptionContainer extends StatelessWidget {
                   style: displayMedium18,
                 )
               : Container(),
-          more == false ? Expanded(child: Text(jobDescription)) : Container(),
+          more == false
+              ? Flexible(
+                  child: Text(
+                  jobDescription,
+                  overflow: TextOverflow.visible,
+                ))
+              : Container(),
           more
-              ? Expanded(
+              ? Flexible(
                   child: ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -64,7 +70,7 @@ class DescriptionContainer extends StatelessWidget {
                     },
                   ),
                 )
-              : Container(), // Add an empty container if 'more' is false
+              : Container(),
         ],
       ),
     );

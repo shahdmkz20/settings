@@ -76,14 +76,11 @@ class TextWithStyle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //  margin: EdgeInsets.symmetric(vertical: 5),
-      child: Text(
-        text,
-        style: displayMedium18.copyWith(
-            fontSize: 15,
-            decoration: underLined ? TextDecoration.underline : null),
-      ),
+    return Text(
+      text,
+      style: displayMedium18.copyWith(
+          fontSize: 15,
+          decoration: underLined ? TextDecoration.underline : null),
     );
   }
 }
@@ -97,7 +94,7 @@ class SettingsAdvertismentList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Get.height * 0.7,
+      height: Get.height * 0.55,
       child: ListView.builder(
           itemCount: trainingList.length,
           itemBuilder: (context, index) {

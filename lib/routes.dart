@@ -1,4 +1,3 @@
-import 'package:articles/view/screens/news/news_home_screen/news_home_screen.dart';
 import 'package:articles/view/screens/settings/advertisment/settings_advertisment_screen.dart';
 import 'package:articles/view/screens/settings/forget_password_screen/settings_forget_password_screen.dart';
 import 'package:articles/view/screens/settings/home_screen/settings_home_screen.dart';
@@ -17,33 +16,13 @@ import 'package:articles/view/screens/settings/training_screen/settings_training
 import 'package:get/get.dart';
 
 import 'core/constants/routes.dart';
-import 'core/middleware/middleware.dart';
-import 'view/screens/Auth/change_screen/changescreen.dart';
-import 'view/screens/Auth/interst_screen/interstscreen.dart';
-import 'view/screens/Auth/login_screen/loginscreen.dart';
-import 'view/screens/Auth/register_screen/registerscreen.dart';
-import 'view/screens/Auth/splash_screen/splashscreen.dart';
-import 'view/screens/Auth/verify_screen/verifyscreen.dart';
-import 'view/screens/home/home_screen.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
-      name: "/",
-      page: () => const SplashScreen(),
-      middlewares: [MyMiddleWare()]),
-
-//Auth
-  GetPage(name: AppRoutes.splash, page: () => const SplashScreen()),
-  GetPage(name: AppRoutes.login, page: () => const loginScreen()),
-  GetPage(name: AppRoutes.register, page: () => const RegisterScreen()),
-  GetPage(name: AppRoutes.change, page: () => const ChangeScreen()),
-  GetPage(name: AppRoutes.verify, page: () => const VerifyScreen()),
-
-//new
-  GetPage(name: AppRoutes.news, page: () => const NewsHomeScreen()),
-
-//intersets
-  GetPage(name: AppRoutes.interst, page: () => const InterstsScreen()),
+    name: "/",
+    page: () => const SettingsHomePage(),
+    //   middlewares: [MyMiddleWare()]
+  ),
 
   //settings
   GetPage(name: AppRoutes.settings, page: () => const SettingsHomePage()),
@@ -73,7 +52,4 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoutes.notifications,
       page: () => const SettingsNotificationsScreen()),
-
-  //Home
-  GetPage(name: AppRoutes.home, page: () => const HomeScreen()),
 ];

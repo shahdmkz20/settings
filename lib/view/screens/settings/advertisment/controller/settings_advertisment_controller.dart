@@ -8,6 +8,7 @@ abstract class SettingsAdvertismentControllerABS extends GetxController {
   late String selectedVal;
   late List<String> dropDownMenuItems;
   late List<TrainingModel> trainings;
+  late List<TrainingModel> filteredList;
   onChanged(val);
   goToTraining(TrainingModel trainingModel);
 }
@@ -18,6 +19,7 @@ class SettingsAdvertismentController extends SettingsAdvertismentControllerABS {
   @override
   void onInit() {
     selectedVal = "";
+    filteredList = trainingsList;
     super.onInit();
   }
 
@@ -26,7 +28,14 @@ class SettingsAdvertismentController extends SettingsAdvertismentControllerABS {
   @override
   onChanged(val) {
     selectedVal = val;
+    filteredList = filterList(dropDownMenuItems.indexOf(val));
     update();
+  }
+
+  List<TrainingModel> filterList(int? selectedField) {
+    return trainingsList.where((trainingModel) {
+      return trainingModel.field == selectedField;
+    }).toList();
   }
 
   @override

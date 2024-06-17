@@ -31,7 +31,7 @@ class SettingsTextSizeScreen extends StatelessWidget {
                 const Text('كيف تريد حجم الخط في تطبيقك ؟'),
                 const Spacer(),
                 SizedBox(
-                  height: Get.height * 0.04,
+                  height: Get.height * 0.05,
                   child: CustomDropDownMenu(
                     padding: false,
                     leftMaring: false,
@@ -60,7 +60,7 @@ class SettingsTextSizeScreen extends StatelessWidget {
                     Text(controller.titles[index]),
                     const Spacer(),
                     SizedBox(
-                      height: Get.height * 0.04,
+                      height: Get.height * 0.05,
                       child: CustomDropDownMenu(
                         padding: false,
                         leftMaring: false,

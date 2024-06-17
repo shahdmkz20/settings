@@ -17,8 +17,9 @@ class SettingsProfileBio extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          //  height: Get.height * 0.12,
-          clipBehavior: Clip.hardEdge,
+          margin: const EdgeInsets.only(left: 10),
+          clipBehavior: Clip.antiAlias,
+          width: Get.width * 0.2,
           decoration: const BoxDecoration(shape: BoxShape.circle),
           child: Image.network(
             height: Get.height * 0.12,

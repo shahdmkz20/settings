@@ -35,7 +35,7 @@ class SettingsAdvertismentScreen extends StatelessWidget {
               bottomMargin: Get.height * 0.03,
             ),
             SettingsAdvertismentList(
-              trainingList: controller.trainings,
+              trainingList: controller.filteredList,
               onTap: (train) {
                 controller.goToTraining(train);
               },

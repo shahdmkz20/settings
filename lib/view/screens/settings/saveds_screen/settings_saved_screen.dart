@@ -37,6 +37,9 @@ class SettingsSavedScreen extends StatelessWidget {
               SizedBox(height: Get.height * 0.03),
               CustomColoredContainerListView(
                 itemsList: savedCategories,
+                onTap: (index) {
+                  controller.goToScreen(index);
+                },
               ),
               SizedBox(height: Get.height * 0.03),
               CustomTextWithMore(

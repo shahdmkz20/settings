@@ -42,7 +42,7 @@ class CustomCard extends StatelessWidget {
                   width: Get.width * 0.02,
                 ),
                 Text(
-                  list[index].name,
+                  list[index].title,
                   style: bodyLarge24,
                 )
               ],

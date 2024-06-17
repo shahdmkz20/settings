@@ -3,21 +3,21 @@ import 'package:articles/view/custom_widgets/settings/defaultscreen/defaultScree
 import 'package:articles/view/screens/settings/jobs_list_screen/widgets/settings_jobs_upper_section.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../home_screen/controller/settings_controller.dart';
 
 import '../../../custom_widgets/settings/cards/settings_job_news_card.dart';
+import 'controller/settings_jobs_list_controller.dart';
 
 class SettingsJobsScreen extends StatelessWidget {
   const SettingsJobsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(SettingsController());
+    Get.put(SettingsJobsListController());
     return Defaultscreens(
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: SingleChildScrollView(
-          child: GetBuilder<SettingsController>(
+          child: GetBuilder<SettingsJobsListController>(
             builder: (controller) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,8 +31,11 @@ class SettingsJobsScreen extends StatelessWidget {
                     style: titleMedium32,
                   ),
                   SizedBox(
-                    height: Get.height * 0.68,
+                    height: Get.height * 0.5,
                     child: SettingsJobNewsCard(
+                      onTap: (index) {
+                        controller.goToJob(controller.filteredJobList[index]);
+                      },
                       job: controller.filteredJobList,
                     ),
                   ),

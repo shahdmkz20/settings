@@ -134,7 +134,7 @@ List<TrainingModel> trainingsList = const [
       'مدة التدريب 6 أشهر, يومين أسبوعيًا',
       '1000000',
     ],
-    field: 4,
+    field: 3,
   ),
   TrainingModel(
     trainId: 5,
@@ -163,6 +163,6 @@ List<TrainingModel> trainingsList = const [
       'مدة التدريب 7 أشهر, يومين أسبوعيًا',
       '120000'
     ],
-    field: 5,
+    field: 2,
   ),
 ];

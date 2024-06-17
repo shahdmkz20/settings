@@ -34,9 +34,13 @@ class SettingsInfoPrivacyCard extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  fieldText,
-                  style: paragraphStyle,
+                SizedBox(
+                  width: Get.width * 0.6,
+                  child: Text(
+                    fieldText,
+                    style: paragraphStyle,
+                    overflow: TextOverflow.visible,
+                  ),
                 ),
                 Row(
                   children: [

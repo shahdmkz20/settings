@@ -1,4 +1,3 @@
-import 'package:articles/view/screens/settings/home_screen/controller/settings_controller.dart';
 import 'package:articles/core/constants/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,7 +10,7 @@ import '../../../../model/settings/news_model.dart';
 class SettingsJobNewsCard extends StatelessWidget {
   final List<JobModel> job;
   final List<News> newsModel;
-  final void Function()? onTap;
+  final void Function(int)? onTap;
   final bool news;
 
   const SettingsJobNewsCard({
@@ -24,7 +23,6 @@ class SettingsJobNewsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SettingsController controller = Get.put(SettingsController());
     return Directionality(
       textDirection: TextDirection.rtl,
       child: SingleChildScrollView(
@@ -38,9 +36,7 @@ class SettingsJobNewsCard extends StatelessWidget {
 
               return InkWell(
                 onTap: () {
-                  if (!news) {
-                    controller.goToJob(job[index]);
-                  }
+                  onTap!(index);
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -151,7 +147,6 @@ class SettingsJobNewsCard extends StatelessWidget {
                                           )
                                         : Container(),
                                     InkWell(
-                                      onTap: onTap,
                                       child: SvgPicture.asset(
                                         width: Get.width * 0.05,
                                         AppImages.forwardArrow,

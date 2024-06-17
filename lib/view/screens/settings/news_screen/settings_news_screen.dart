@@ -27,8 +27,8 @@ class SettingsNewsScreen extends StatelessWidget {
                 child: SettingsJobNewsCard(
                   news: true,
                   newsModel: controller.filteredList,
-                  onTap: () {
-                    controller.share();
+                  onTap: (val) {
+                    controller.categoryChanged(val);
                   },
                 ),
               );

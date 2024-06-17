@@ -23,18 +23,23 @@ class TextwithIcon extends StatelessWidget {
 }
 
 class RecordsUpperOptions extends StatelessWidget {
-  const RecordsUpperOptions({super.key});
+  final void Function()? filterIconTap;
+  final void Function()? deleteIconTap;
+  const RecordsUpperOptions(
+      {super.key, this.filterIconTap, this.deleteIconTap});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const TextwithIcon(
+        TextwithIcon(
+          onTap: filterIconTap,
           text: 'تصفية',
           icon: Icons.tune,
         ),
         SizedBox(width: Get.width * 0.07),
-        const TextwithIcon(
+        TextwithIcon(
+          onTap: deleteIconTap,
           text: 'حذف السجل',
           icon: Icons.delete_outlined,
         )

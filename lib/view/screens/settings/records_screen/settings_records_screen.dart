@@ -27,11 +27,16 @@ class SettingsRecordsScreen extends StatelessWidget {
             SizedBox(
               height: Get.height * 0.03,
             ),
-            const RecordsUpperOptions(),
+            RecordsUpperOptions(),
             SizedBox(
               height: Get.height * 0.03,
             ),
-            const SelectAllCheckbox(),
+            SelectAllCheckbox(
+              onChanged: (val) {
+                controller.onChanged(val);
+              },
+              value: controller.isChecked,
+            ),
             SizedBox(
               height: Get.height * 0.03,
             ),

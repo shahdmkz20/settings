@@ -4,8 +4,6 @@ import '../../../../../model/settings/news_model.dart';
 
 abstract class SettingsNewsControllerASB extends GetxController {
   categoryChanged(int index);
-  filterList(int selectedCategory);
-  share();
 }
 
 class SettingsNewsController extends SettingsNewsControllerASB {
@@ -18,7 +16,6 @@ class SettingsNewsController extends SettingsNewsControllerASB {
     update();
   }
 
-  @override
   void filterList(int selectedCategory) {
     if (selectedCategory == 0) {
       // If selectedCategory is zero, do not filter the list
@@ -31,7 +28,4 @@ class SettingsNewsController extends SettingsNewsControllerASB {
     }
     update();
   }
-
-  @override
-  share() {}
 }

@@ -15,6 +15,9 @@ class SettingsRecordsController extends SettingsRecordsControllerABS {
   @override
   onChanged(val) {
     isChecked = val;
+    for (var recordEntry in recordWithValue) {
+      recordEntry.value = isChecked;
+    }
     update();
   }
 
@@ -47,5 +50,13 @@ class SettingsRecordsController extends SettingsRecordsControllerABS {
       recordWithValue[index] = RecordWithValue(record, !currentCheckedValue);
       update();
     }
+  }
+
+  void deleteSelectedRecords() {
+    // Filter out the records that are selected
+    recordWithValue = recordWithValue.where((entry) => !entry.value).toList();
+    // Update recordsList with the remaining records
+    recordsList = recordWithValue.map((entry) => entry.record).toList();
+    update();
   }
 }
